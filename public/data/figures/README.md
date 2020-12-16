@@ -1,1 +1,0 @@
-This folder contains the raw data displayed in the Options Guide.
