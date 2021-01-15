@@ -1,36 +1,50 @@
 const fs = require('fs-extra');
 const path = require('path');
+const showdown = require('showdown');
 const csv = require('csv-parser');
 const _ = require('lodash');
 
-const SOURCE = path.join(__dirname, '/data');
-const DEST = path.join(__dirname, '../public/data/figures');
+const TEXT_SOURCE = path.join(__dirname, '/data/text');
+const DATA_SOURCE = path.join(__dirname, '/data/figures');
+const DEST = path.join(__dirname, '../public/data');
+
+showdown.setFlavor('github');
 
 fs.emptyDir(DEST)
   .then(() => {
-    fs.readdir(SOURCE, (err, files) => {
+    fs.readdir(TEXT_SOURCE, (err, files) => {
       if (err) {
         console.error(err);
       } else {
         files.forEach(file => {
-          let results = [];
-          let data = {};
-          fs.createReadStream(path.join(__dirname, '/data', file))
-            .pipe(csv({ mapHeaders: ({ header, index }) => _.camelCase(header) }))
-            .on('data', row => {
-              results.push(row);
-            })
-            .on('end', () => {
-              results.forEach(row => {
-                const indicator = _.camelCase(row['indicator']);
-                if (!data[indicator]) data[indicator] = {};
-                data[indicator][_.camelCase(row['subIndicator'])] = parseFloat(
-                  String(row['value']).replace('$', ''),
-                );
+          let option = {};
+          const converter = new showdown.Converter({ metadata: true });
+          fs.readFile(path.join(TEXT_SOURCE, file), 'utf8', (err, text) => {
+            const html = converter.makeHtml(text);
+            const meta = converter.getMetadata();
+            option.id = meta.id;
+            option.title = meta.title;
+            option.text = html;
+            let rows = [];
+            let data = {};
+            fs.createReadStream(path.join(DATA_SOURCE, meta.data))
+              .pipe(csv({ mapHeaders: ({ header, index }) => _.camelCase(header) }))
+              .on('data', row => {
+                rows.push(row);
+              })
+              .on('end', () => {
+                rows.forEach(row => {
+                  const indicator = _.camelCase(row['indicator']);
+                  if (!data[indicator]) data[indicator] = {};
+                  data[indicator][_.camelCase(row['subIndicator'])] = parseFloat(
+                    String(row['value']).replace('$', ''),
+                  );
+                });
+                option.data = data;
+                fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
+                console.log(`Finished ${file}`);
               });
-              fs.writeFileSync(path.join(DEST, `${file.split('.')[0]}.json`), JSON.stringify(data));
-              console.log(`Finished ${file}`);
-            });
+          });
         });
       }
     });
