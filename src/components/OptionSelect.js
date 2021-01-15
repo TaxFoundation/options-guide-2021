@@ -8,11 +8,12 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const OptionSelect = ({ options }) => {
+const OptionSelect = ({ options, setOption }) => {
   return (
     <Container>
       <h2>Choose a Tax Reform Option</h2>
-      <select name="option-select" id="option-select">
+      <select name="option-select" id="option-select" onChange={e => setOption(e.target.value)}>
+        <option value="home">Options for Tax Reform Home Page</option>
         {options.map(option => (
           <option value={option.id}>{`Option ${option.id}: ${option.title}`}</option>
         ))}
