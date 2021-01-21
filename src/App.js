@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 
+import options from './data/cleaned/data.json';
+
 function App() {
   // todo set option state according to pae query val
   const [option, setOption] = useState('home');
-  const [optionData, setOptionData] = useState(null);
-  const options = [
-    { id: 1, title: 'Do a tax thing' },
-    { id: 2, title: 'Create a tax on taxes' },
-    { id: 3, title: 'Tax the Rich, but also the Middle Class and Poor' },
-  ];
+  const [optionData, setOptionData] = useState({});
 
   useEffect(() => {
     // todo fetch option data on request
-    setOptionData('test');
+    if (option !== 'home') {
+      setOptionData(options.find(opt => opt.id === option));
+    } else {
+      setOptionData({});
+    }
   }, [option]);
 
   return (
     <div>
       <Navigation options={options} setOption={setOption}></Navigation>
+      <div>{JSON.stringify(optionData)}</div>
     </div>
   );
 }
