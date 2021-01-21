@@ -6,7 +6,7 @@ const _ = require('lodash');
 
 const TEXT_SOURCE = path.join(__dirname, '/data/text');
 const DATA_SOURCE = path.join(__dirname, '/data/figures');
-const DEST = path.join(__dirname, '../public/data');
+const DEST = path.join(__dirname, '/data/cleaned');
 
 showdown.setFlavor('github');
 
@@ -29,13 +29,12 @@ for (let i = 0, j = files.length; i < j; i++) {
     const indicator = _.camelCase(d['Indicator']);
     const subIndicator = _.camelCase(d['Sub-indicator']);
     if (!option.data[indicator]) {
-      console.log(i, d);
       option.data[indicator] = {};
     }
     option.data[indicator][subIndicator] = d.Value;
   });
   compiledData.push(option);
-  fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
+  // fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
   console.log(`Finished ${file}`);
 }
 fs.writeFileSync(path.join(DEST, `data.json`), JSON.stringify(compiledData));
