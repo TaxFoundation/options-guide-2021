@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const showdown = require('showdown');
-const csv = require('csv-parser');
+const d3 = require('d3-dsv');
 const _ = require('lodash');
 
 const TEXT_SOURCE = path.join(__dirname, '/data/text');
@@ -10,43 +10,32 @@ const DEST = path.join(__dirname, '../public/data');
 
 showdown.setFlavor('github');
 
-fs.emptyDir(DEST)
-  .then(() => {
-    fs.readdir(TEXT_SOURCE, (err, files) => {
-      if (err) {
-        console.error(err);
-      } else {
-        files.forEach(file => {
-          let option = {};
-          const converter = new showdown.Converter({ metadata: true });
-          fs.readFile(path.join(TEXT_SOURCE, file), 'utf8', (err, text) => {
-            const html = converter.makeHtml(text);
-            const meta = converter.getMetadata();
-            option.id = meta.id;
-            option.title = meta.title;
-            option.text = html;
-            let rows = [];
-            let data = {};
-            fs.createReadStream(path.join(DATA_SOURCE, meta.data))
-              .pipe(csv({ mapHeaders: ({ header, index }) => _.camelCase(header) }))
-              .on('data', row => {
-                rows.push(row);
-              })
-              .on('end', () => {
-                rows.forEach(row => {
-                  const indicator = _.camelCase(row['indicator']);
-                  if (!data[indicator]) data[indicator] = {};
-                  data[indicator][_.camelCase(row['subIndicator'])] = parseFloat(
-                    String(row['value']).replace('$', ''),
-                  );
-                });
-                option.data = data;
-                fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
-                console.log(`Finished ${file}`);
-              });
-          });
-        });
-      }
-    });
-  })
-  .catch(err => console.error(err));
+fs.emptyDirSync(DEST);
+const files = fs.readdirSync(TEXT_SOURCE);
+let compiledData = [];
+for (let i = 0, j = files.length; i < j; i++) {
+  const file = files[i];
+  let option = {};
+  const converter = new showdown.Converter({ metadata: true });
+  const text = fs.readFileSync(path.join(TEXT_SOURCE, file), 'utf8');
+  const html = converter.makeHtml(text);
+  const meta = converter.getMetadata();
+  option.id = meta.id;
+  option.title = meta.title;
+  option.text = html;
+  option.data = {};
+  const csv = fs.readFileSync(path.join(DATA_SOURCE, meta.data), 'utf8');
+  d3.csvParse(csv, d => {
+    const indicator = _.camelCase(d['Indicator']);
+    const subIndicator = _.camelCase(d['Sub-indicator']);
+    if (!option.data[indicator]) {
+      console.log(i, d);
+      option.data[indicator] = {};
+    }
+    option.data[indicator][subIndicator] = d.Value;
+  });
+  compiledData.push(option);
+  fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
+  console.log(`Finished ${file}`);
+}
+fs.writeFileSync(path.join(DEST, `data.json`), JSON.stringify(compiledData));
