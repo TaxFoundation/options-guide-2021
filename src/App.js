@@ -1,7 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { createGlobalStyle } from 'styled-components';
+
 import Navigation from './components/Navigation';
+import Home from './components/Home';
+import OptionLayout from './components/OptionLayout';
 
 import options from './data/cleaned/data.json';
+
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --tf-blue: #0094ff;
+  }
+
+  .options-guide-interactive {
+    font-family: Lato, sans-serif;
+  }
+`;
 
 function App() {
   // todo set option state according to pae query val
@@ -18,9 +32,11 @@ function App() {
   }, [option]);
 
   return (
-    <div>
+    <div className="options-guide-interactive">
+      <GlobalStyle />
       <Navigation options={options} setOption={setOption}></Navigation>
-      <div>{JSON.stringify(optionData)}</div>
+      {option === 'home' && <Home />}
+      {option !== 'home' && <OptionLayout option={optionData} />}
     </div>
   );
 }
