@@ -10,6 +10,7 @@ import options from './data/cleaned/data.json';
 const GlobalStyle = createGlobalStyle`
   :root {
     --tf-blue: #0094ff;
+    --gray: #ccc;
   }
 
   .options-guide-interactive {
