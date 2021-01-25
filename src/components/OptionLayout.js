@@ -39,7 +39,6 @@ const Option = ({ option }) => {
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />
-      <div>{JSON.stringify(option)}</div>
     </div>
   );
 };

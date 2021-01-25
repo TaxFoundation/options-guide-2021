@@ -21,14 +21,14 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   // todo set option state according to pae query val
   const [option, setOption] = useState('home');
-  const [optionData, setOptionData] = useState({});
+  const [optionData, setOptionData] = useState(null);
 
   useEffect(() => {
     // todo fetch option data on request
     if (option !== 'home') {
       setOptionData(options.find(opt => opt.id === option));
     } else {
-      setOptionData({});
+      setOptionData(null);
     }
   }, [option]);
 
@@ -37,7 +37,7 @@ function App() {
       <GlobalStyle />
       <Navigation options={options} setOption={setOption}></Navigation>
       {option === 'home' && <Home />}
-      {option !== 'home' && <OptionLayout option={optionData} />}
+      {option !== 'home' && optionData && <OptionLayout option={optionData} />}
     </div>
   );
 }
