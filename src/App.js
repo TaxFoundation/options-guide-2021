@@ -9,7 +9,8 @@ import options from './data/cleaned/data.json';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --tf-blue: #0094ff;
+    --tf-blue: hsl(205, 100%, 50%);
+    --tf-blue-light: hsl(205, 100%, 90%);
     --gray: #ccc;
   }
 
