@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import NumericTableCell from './NumericTableCell';
+
 const Effects = styled.div`
   display: grid;
   grid-gap: 1rem;
@@ -74,83 +76,83 @@ const Table = ({ data }) => {
             }}
           >
             <td>0% to 20%</td>
-            <td>{data['2030ConventionalDistribution']['0To20']}</td>
-            <td>{data.longRunDynamicDistribution['0To20']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['0To20']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['0To20']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 20%, var(--normal-highlight) 20%, var(--normal-highlight) 40%, #fefefe 40%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 20%, var(--normal-highlight) 20%, var(--normal-highlight) 40%, #fefefe 40%, #fefefe 100%)',
             }}
           >
             <td>20% to 40%</td>
-            <td>{data['2030ConventionalDistribution']['20To40']}</td>
-            <td>{data.longRunDynamicDistribution['20To40']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['20To40']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['20To40']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 40%, var(--normal-highlight) 40%, var(--normal-highlight) 60%, #fefefe 60%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 40%, var(--normal-highlight) 40%, var(--normal-highlight) 60%, #fefefe 60%, #fefefe 100%)',
             }}
           >
             <td>40% to 60%</td>
-            <td>{data['2030ConventionalDistribution']['40To60']}</td>
-            <td>{data.longRunDynamicDistribution['40To60']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['40To60']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['40To60']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 60%, var(--normal-highlight) 60%, var(--normal-highlight) 80%, #fefefe 80%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 60%, var(--normal-highlight) 60%, var(--normal-highlight) 80%, #fefefe 80%, #fefefe 100%)',
             }}
           >
             <td>60% to 80%</td>
-            <td>{data['2030ConventionalDistribution']['60To80']}</td>
-            <td>{data.longRunDynamicDistribution['60To80']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['60To80']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['60To80']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 80%, var(--normal-highlight) 80%, var(--normal-highlight) 100%, #fefefe 100%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 80%, var(--normal-highlight) 80%, var(--normal-highlight) 100%, #fefefe 100%, #fefefe 100%)',
             }}
           >
             <td>80% to 100%</td>
-            <td>{data['2030ConventionalDistribution']['80To100']}</td>
-            <td>{data.longRunDynamicDistribution['80To100']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['80To100']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['80To100']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 90%, var(--rich-highlight) 90%, var(--rich-highlight) 95%, #fefefe 95%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 90%, var(--rich-highlight) 90%, var(--rich-highlight) 95%, #fefefe 95%, #fefefe 100%)',
             }}
           >
             <td>90% to 95%</td>
-            <td>{data['2030ConventionalDistribution']['90To95']}</td>
-            <td>{data.longRunDynamicDistribution['90To95']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['90To95']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['90To95']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 95%, var(--rich-highlight) 95%, var(--rich-highlight) 99%, #fefefe 99%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 95%, var(--rich-highlight) 95%, var(--rich-highlight) 99%, #fefefe 99%, #fefefe 100%)',
             }}
           >
             <td>95% to 99%</td>
-            <td>{data['2030ConventionalDistribution']['95To99']}</td>
-            <td>{data.longRunDynamicDistribution['95To99']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['95To99']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['95To99']}</NumericTableCell>
           </tr>
           <tr
             style={{
               backgroundImage:
-                'linear-gradient(90deg, #fefefe 0%, #fefefe 99%, var(--rich-highlight) 99%, var(--rich-highlight) 100%, #fefefe 100%, #fefefe 100%)',
+                'linear-gradient(90deg, #fafafa 0%, #fafafa 99%, var(--rich-highlight) 99%, var(--rich-highlight) 100%, #fefefe 100%, #fefefe 100%)',
             }}
           >
             <td>99% to 100%</td>
-            <td>{data['2030ConventionalDistribution']['99To100']}</td>
-            <td>{data.longRunDynamicDistribution['99To100']}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution']['99To100']}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution['99To100']}</NumericTableCell>
           </tr>
           <tr style={{ backgroundColor: 'transparent', fontWeight: 700 }}>
             <td>Total</td>
-            <td>{data['2030ConventionalDistribution'].total}</td>
-            <td>{data.longRunDynamicDistribution.total}</td>
+            <NumericTableCell>{data['2030ConventionalDistribution'].total}</NumericTableCell>
+            <NumericTableCell>{data.longRunDynamicDistribution.total}</NumericTableCell>
           </tr>
         </tbody>
       </StyledTable>

@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import OptionLayout from './components/OptionLayout';
+import Comparison from './components/Comparison';
 
 import options from './data/cleaned/data.json';
 
@@ -39,6 +40,19 @@ function App() {
       <Navigation options={options} setOption={setOption}></Navigation>
       {option === 'home' && <Home />}
       {option !== 'home' && optionData && <OptionLayout option={optionData} />}
+      <Comparison
+        current={option}
+        options={options.map(opt => {
+          return {
+            id: opt.id,
+            title: opt.title,
+            longRunGDP: opt.data.longRunEconomic.gdp,
+            fteJobs: opt.data.longRunEconomic.fullTimeEquivalentJobs,
+            static10YearRev: opt.data.conventionalRevenue.total,
+            dynamic10YearRev: opt.data.dynamicRevenue.total,
+          };
+        })}
+      ></Comparison>
     </div>
   );
 }
