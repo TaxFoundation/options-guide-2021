@@ -31,7 +31,7 @@ for (let i = 0, j = files.length; i < j; i++) {
     if (!option.data[indicator]) {
       option.data[indicator] = {};
     }
-    option.data[indicator][subIndicator] = d.Value;
+    option.data[indicator][subIndicator] = d.Value.replace('$', '');
   });
   compiledData.push(option);
   // fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
