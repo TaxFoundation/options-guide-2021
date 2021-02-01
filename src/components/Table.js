@@ -16,8 +16,8 @@ const EffectStatistic = styled.span`
 `;
 
 const StyledTable = styled.table`
-  --normal-highlight: hsl(205, 100%, 97%);
-  --rich-highlight: hsl(255, 100%, 97%);
+  --normal-highlight: hsl(205, 100%, 95%);
+  --rich-highlight: hsl(255, 100%, 95%);
 
   thead th {
     border: none;

@@ -34,7 +34,10 @@ const Option = ({ option }) => {
       </h2>
       {/* TODO: sections with data */}
       <DataContainer>
-        <Graph data={option.data}></Graph>
+        <Graph
+          conventional={option.data.conventionalRevenue}
+          dynamic={option.data.dynamicRevenue}
+        ></Graph>
         <Table data={option.data}></Table>
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
