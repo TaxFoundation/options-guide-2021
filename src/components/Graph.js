@@ -1,24 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Group } from '@vx/group';
 import { LinePath } from '@vx/shape';
 import { scaleLinear } from '@vx/scale';
-import { curveMonotoneX } from '@vx/curve';
-import { AxisBottom, AxisLeft } from '@vx/axis';
+import { Axis, AxisLeft } from '@vx/axis';
 import { ScaleSVG } from '@vx/responsive';
-
-const Container = styled.div`
-  border: 1px solid var(--gray);
-`;
 
 const Graph = ({ conventional, dynamic }) => {
   const width = 600;
-  const height = 500;
+  const height = 540;
   const margin = {
     bottom: 40,
-    left: 40,
+    left: 60,
     right: 20,
-    top: 20,
+    top: 30,
   };
 
   const values = [...conventional.map(d => d.value), ...dynamic.map(d => d.value), 0];
@@ -40,21 +34,23 @@ const Graph = ({ conventional, dynamic }) => {
   });
 
   return (
-    <Container>
+    <div>
       <ScaleSVG width={width} height={height}>
         <AxisLeft
+          label="Change in Government Revenue (Billions)"
           left={margin.left}
           scale={yScale}
           tickFormat={v => (+v < 0 ? `-$${Math.abs(v)}` : `$${+v}`)}
           top={margin.top}
         ></AxisLeft>
-        <AxisBottom
-          labelOffset={min <= 0 ? 10 : 0}
+        <Axis
+          label="Year"
           left={margin.left}
+          orientation={max === 0 ? 'top' : 'bottom'}
           scale={xScale}
           top={yScale(0) + margin.top}
           tickFormat={v => v}
-        ></AxisBottom>
+        ></Axis>
         <LinePath
           data={conventional}
           x={d => xScale(d.year) + margin.left}
@@ -70,7 +66,7 @@ const Graph = ({ conventional, dynamic }) => {
           strokeWidth={3}
         ></LinePath>
       </ScaleSVG>
-    </Container>
+    </div>
   );
 };
 
