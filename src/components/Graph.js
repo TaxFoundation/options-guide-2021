@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Group } from '@vx/group';
 import { LinePath } from '@vx/shape';
-import { scaleTime, scaleLinear } from '@vx/scale';
+import { scaleLinear } from '@vx/scale';
 import { curveMonotoneX } from '@vx/curve';
 import { AxisBottom, AxisLeft } from '@vx/axis';
 import { ScaleSVG } from '@vx/responsive';
@@ -21,29 +21,24 @@ const Graph = ({ conventional, dynamic }) => {
     top: 20,
   };
 
-  const conventionalYears = Object.keys(conventional);
-  const dynamicYears = Object.keys(dynamic);
-  const conventionalValues = Object.values(conventional);
-  const dynamicValues = Object.values(dynamic);
-
-  const min = Math.min(...conventionalValues, ...dynamicValues, 0);
-  const max = Math.max(...conventionalValues, ...dynamicValues, 0);
+  const values = [...conventional.map(d => d.value), ...dynamic.map(d => d.value), 0];
+  const years = [...conventional.map(d => d.year), ...dynamic.map(d => d.year)];
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const yearMin = Math.min(...years);
+  const yearMax = Math.max(...years);
 
   const yScale = scaleLinear({
-    domain: [min, max],
+    domain: [max, min],
     range: [margin.top, height - margin.top - margin.bottom],
     // nice: true,
   });
-  const xScale = scaleTime({
-    domain: [
-      Math.min(...conventionalYears, ...dynamicYears),
-      Math.max(...conventionalYears, ...dynamicYears),
-    ],
+  const xScale = scaleLinear({
+    domain: [yearMin, yearMax],
     range: [0, width - margin.left - margin.right],
     // nice: true,
   });
 
-  console.log(min, max);
   return (
     <Container>
       <ScaleSVG width={width} height={height}>
@@ -54,24 +49,25 @@ const Graph = ({ conventional, dynamic }) => {
           top={margin.top}
         ></AxisLeft>
         <AxisBottom
+          labelOffset={min <= 0 ? 10 : 0}
           left={margin.left}
           scale={xScale}
-          top={height - margin.bottom}
+          top={yScale(0) + margin.top}
           tickFormat={v => v}
         ></AxisBottom>
         <LinePath
-          data={Object.keys(conventional).map(key => {
-            return { year: key, value: conventional[key] };
-          })}
-          x={d => +d.year}
-          y={d => +d.value}
+          data={conventional}
+          x={d => xScale(d.year) + margin.left}
+          y={d => yScale(d.value) + margin.top}
+          stroke="#000"
+          strokeWidth={3}
         ></LinePath>
         <LinePath
-          data={Object.keys(dynamic).map(key => {
-            return { year: key, value: dynamic[key] };
-          })}
-          x={d => +d.year}
-          y={d => +d.value}
+          data={dynamic}
+          x={d => xScale(d.year) + margin.left}
+          y={d => yScale(d.value) + margin.top}
+          stroke="#000"
+          strokeWidth={3}
         ></LinePath>
       </ScaleSVG>
     </Container>

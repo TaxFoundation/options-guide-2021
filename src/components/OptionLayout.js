@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import HR from './HR';
 import Graph from './Graph';
 import Table from './Table';
+import { isNumber } from 'lodash';
 
 const OptionNumber = styled.span`
   color: var(--tf-blue);
@@ -25,7 +26,16 @@ const DataContainer = styled.div`
   }
 `;
 
+const filterOutTotal = obj => {
+  return Object.keys(obj)
+    .filter(key => key !== 'total')
+    .map(key => {
+      return { year: +key, value: +obj[key] };
+    });
+};
+
 const Option = ({ option }) => {
+  console.log(filterOutTotal(option.data.conventionalRevenue));
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>
@@ -35,8 +45,8 @@ const Option = ({ option }) => {
       {/* TODO: sections with data */}
       <DataContainer>
         <Graph
-          conventional={option.data.conventionalRevenue}
-          dynamic={option.data.dynamicRevenue}
+          conventional={filterOutTotal(option.data.conventionalRevenue)}
+          dynamic={filterOutTotal(option.data.dynamicRevenue)}
         ></Graph>
         <Table data={option.data}></Table>
       </DataContainer>
