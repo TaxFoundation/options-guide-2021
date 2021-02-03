@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Text } from '@vx/text';
 import { LinePath } from '@vx/shape';
 import { scaleLinear, scaleOrdinal } from '@vx/scale';
 import { Axis, AxisLeft } from '@vx/axis';
@@ -16,7 +17,7 @@ const Graph = ({ conventional, dynamic }) => {
   const width = 600;
   const height = 540;
   const margin = {
-    bottom: 40,
+    bottom: 50,
     left: 60,
     right: 20,
     top: 30,
@@ -50,8 +51,16 @@ const Graph = ({ conventional, dynamic }) => {
   return (
     <div>
       <ScaleSVG width={width} height={height}>
+        <Text
+          dx={(width - margin.left) / 2 + margin.left}
+          dy={0}
+          textAnchor="middle"
+          verticalAnchor="start"
+        >
+          Change in GDP Over 10 Years (Billions)
+        </Text>
         <AxisLeft
-          label="Change in Government Revenue (Billions)"
+          label="Change in GDP (Billions)"
           left={margin.left}
           scale={yScale}
           tickFormat={v => (+v < 0 ? `-$${Math.abs(v)}` : `$${+v}`)}
