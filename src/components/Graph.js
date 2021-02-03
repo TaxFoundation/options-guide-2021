@@ -1,9 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LinePath } from '@vx/shape';
-import { scaleLinear } from '@vx/scale';
+import { scaleLinear, scaleOrdinal } from '@vx/scale';
 import { Axis, AxisLeft } from '@vx/axis';
+import { LegendOrdinal } from '@vx/legend';
 import { ScaleSVG } from '@vx/responsive';
+
+const LegendContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
 
 const Graph = ({ conventional, dynamic }) => {
   const width = 600;
@@ -33,6 +40,13 @@ const Graph = ({ conventional, dynamic }) => {
     // nice: true,
   });
 
+  const conColor = '#ff0000';
+  const dynColor = '#0000ff';
+  const colorScale = scaleOrdinal({
+    domain: ['Conventional', 'Dynamic'],
+    range: [conColor, dynColor],
+  });
+
   return (
     <div>
       <ScaleSVG width={width} height={height}>
@@ -55,17 +69,20 @@ const Graph = ({ conventional, dynamic }) => {
           data={conventional}
           x={d => xScale(d.year) + margin.left}
           y={d => yScale(d.value) + margin.top}
-          stroke="#000"
+          stroke={conColor}
           strokeWidth={3}
         ></LinePath>
         <LinePath
           data={dynamic}
           x={d => xScale(d.year) + margin.left}
           y={d => yScale(d.value) + margin.top}
-          stroke="#000"
+          stroke={dynColor}
           strokeWidth={3}
         ></LinePath>
       </ScaleSVG>
+      <LegendContainer>
+        <LegendOrdinal scale={colorScale} itemMargin="0 20px" direction="row" />
+      </LegendContainer>
     </div>
   );
 };
