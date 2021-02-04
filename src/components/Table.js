@@ -3,10 +3,16 @@ import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
 
+const Container = styled.div`
+  display: grid;
+  grid-template: repeat(2, auto) / 1fr;
+`;
+
 const Effects = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 `;
 
 const EffectStatistic = styled.span`
@@ -37,7 +43,7 @@ const StyledTable = styled.table`
 
 const Table = ({ data }) => {
   return (
-    <div>
+    <Container>
       <Effects>
         <div>
           <h3>Economic Effects</h3>
@@ -156,7 +162,7 @@ const Table = ({ data }) => {
           </tr>
         </tbody>
       </StyledTable>
-    </div>
+    </Container>
   );
 };
 

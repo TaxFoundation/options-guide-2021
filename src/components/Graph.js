@@ -7,6 +7,12 @@ import { Axis, AxisLeft } from '@vx/axis';
 import { LegendOrdinal } from '@vx/legend';
 import { ScaleSVG } from '@vx/responsive';
 
+const Container = styled.div`
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  padding: 1rem;
+`;
+
 const LegendContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -15,7 +21,7 @@ const LegendContainer = styled.div`
 
 const Graph = ({ conventional, dynamic }) => {
   const width = 600;
-  const height = 540;
+  const height = 400;
   const margin = {
     bottom: 50,
     left: 60,
@@ -49,7 +55,7 @@ const Graph = ({ conventional, dynamic }) => {
   });
 
   return (
-    <div>
+    <Container>
       <ScaleSVG width={width} height={height}>
         <Text
           dx={(width - margin.left) / 2 + margin.left}
@@ -68,6 +74,7 @@ const Graph = ({ conventional, dynamic }) => {
         ></AxisLeft>
         <Axis
           label="Year"
+          labelOffset={5}
           left={margin.left}
           orientation={max === 0 ? 'top' : 'bottom'}
           scale={xScale}
@@ -92,7 +99,7 @@ const Graph = ({ conventional, dynamic }) => {
       <LegendContainer>
         <LegendOrdinal scale={colorScale} itemMargin="0 20px" direction="row" />
       </LegendContainer>
-    </div>
+    </Container>
   );
 };
 

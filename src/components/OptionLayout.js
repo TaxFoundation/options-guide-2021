@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import HR from './HR';
 import Graph from './Graph';
 import Table from './Table';
-import { isNumber } from 'lodash';
 
 const OptionNumber = styled.span`
   color: var(--tf-blue);
@@ -16,14 +15,7 @@ const OptionNumber = styled.span`
 const DataContainer = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-areas:
-    'graphs'
-    'tables';
-
-  @media (min-width: 780px) {
-    grid-template-areas: 'graphs' 'tables';
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template: repeat(2, auto) / 1fr;
 `;
 
 const filterOutTotal = obj => {
