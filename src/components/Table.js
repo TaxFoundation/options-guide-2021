@@ -48,21 +48,39 @@ const Table = ({ data }) => {
         <div>
           <h3>Economic Effects</h3>
           <p>
-            <EffectStatistic>{data.longRunEconomic.gdp}</EffectStatistic> Long-Run Change in GDP
+            <EffectStatistic>
+              {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${100 * data.longRunEconomic.gdp}%`}
+            </EffectStatistic>{' '}
+            Long-Run Change in GDP
           </p>
           <p>
-            <EffectStatistic>{data.longRunEconomic.fullTimeEquivalentJobs}</EffectStatistic>{' '}
+            <EffectStatistic>
+              {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${new Intl.NumberFormat().format(
+                data.longRunEconomic.fullTimeEquivalentJobs,
+              )}`}
+            </EffectStatistic>{' '}
             Full-Time Equivalent Jobs
           </p>
         </div>
         <div>
           <h3>Budgetary Effects</h3>
           <p>
-            <EffectStatistic>{data.conventionalRevenue.total}</EffectStatistic> Static 10-Year
-            Revenue
+            <EffectStatistic>
+              {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+                data.conventionalRevenue.total,
+              )}{' '}
+              Billion
+            </EffectStatistic>{' '}
+            Static 10-Year Revenue
           </p>
           <p>
-            <EffectStatistic>{data.dynamicRevenue.total}</EffectStatistic> Dynamic 10-Year Revenue
+            <EffectStatistic>
+              {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+                data.dynamicRevenue.total,
+              )}{' '}
+              Billion
+            </EffectStatistic>{' '}
+            Dynamic 10-Year Revenue
           </p>
         </div>
       </Effects>
