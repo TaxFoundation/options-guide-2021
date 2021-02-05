@@ -27,7 +27,6 @@ const filterOutTotal = obj => {
 };
 
 const Option = ({ option }) => {
-  console.log(filterOutTotal(option.data.conventionalRevenue));
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>

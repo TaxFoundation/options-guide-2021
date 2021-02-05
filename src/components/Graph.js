@@ -59,7 +59,7 @@ const Graph = ({ conventional, dynamic }) => {
       <ScaleSVG width={width} height={height}>
         <Text
           dx={(width - margin.left) / 2 + margin.left}
-          dy={0}
+          dy={3}
           style={{ fontWeight: 700 }}
           textAnchor="middle"
           verticalAnchor="start"

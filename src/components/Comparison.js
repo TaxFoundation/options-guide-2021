@@ -1,31 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
 
-const Comparison = ({ options }) => {
+const TH = styled.th`
+  cursor: pointer;
+`;
+
+const Comparison = ({ current, options }) => {
+  const [sortBy, setSortBy] = useState('id');
+  const [ascending, setAscending] = useState(true);
+
+  const handleSort = id => {
+    if (sortBy !== id) {
+      setSortBy(id);
+      setAscending(true);
+    } else {
+      setAscending(!ascending);
+    }
+  };
+
   return (
     <table>
       <thead>
         <tr>
-          <th>Tax Reform Option</th>
-          <th>Long-Run Change in GDP</th>
-          <th>Full-Time Equivalent Jobs</th>
-          <th>Static 10-Year Revenue (billions)</th>
-          <th>Dynamic 10-Year Revenue (billions)</th>
+          <TH onClick={() => handleSort('id')}>Tax Reform Option</TH>
+          <TH onClick={() => handleSort('gdp')}>Long-Run Change in GDP</TH>
+          <TH onClick={() => handleSort('fte')}>Full-Time Equivalent Jobs</TH>
+          <TH onClick={() => handleSort('static')}>Static 10-Year Revenue (billions)</TH>
+          <TH onClick={() => handleSort('dynamic')}>Dynamic 10-Year Revenue (billions)</TH>
         </tr>
       </thead>
       <tbody>
-        {options.map(option => (
-          <tr key={`option-table-${option.id}`}>
-            <td>
-              <span>Option {option.id}</span>: {option.title}
-            </td>
-            <NumericTableCell>{option.longRunGDP}</NumericTableCell>
-            <NumericTableCell>{option.fteJobs}</NumericTableCell>
-            <NumericTableCell>{option.static10YearRev}</NumericTableCell>
-            <NumericTableCell>{option.dynamic10YearRev}</NumericTableCell>
-          </tr>
-        ))}
+        {options
+          .sort((a, b) => {
+            switch (sortBy) {
+              case 'gdp':
+                return ascending ? a.longRunGDP - b.longRunGDP : b.longRunGDP - a.longRunGDP;
+              case 'fte':
+                return ascending ? a.fteJobs - b.fteJobs : b.fteJobs - a.fteJobs;
+              case 'static':
+                return ascending
+                  ? a.static10YearRev - b.static10YearRev
+                  : b.static10YearRev - a.static10YearRev;
+              case 'dynamic':
+                return ascending
+                  ? a.dynamic10YearRev - b.dynamic10YearRev
+                  : b.dynamic10YearRev - a.dynamic10YearRev;
+              default:
+                return ascending ? a.id - b.id : b.id - a.id;
+            }
+          })
+          .map(option => (
+            <tr key={`option-table-${option.id}`}>
+              <td>{`Option ${option.id}: ${option.title}`}</td>
+              <NumericTableCell>{`${option.longRunGDP * 100}%`}</NumericTableCell>
+              <NumericTableCell>{new Intl.NumberFormat().format(option.fteJobs)}</NumericTableCell>
+              <NumericTableCell>
+                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+                  option.static10YearRev,
+                )}
+              </NumericTableCell>
+              <NumericTableCell>
+                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+                  option.dynamic10YearRev,
+                )}
+              </NumericTableCell>
+            </tr>
+          ))}
       </tbody>
     </table>
   );
