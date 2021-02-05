@@ -4,7 +4,48 @@ import styled from 'styled-components';
 import NumericTableCell from './NumericTableCell';
 
 const TH = styled.th`
+  background-color: white !important;
   cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s ease-in-out background-color;
+
+  &:hover {
+    background-color: var(--tf-blue-light) !important;
+  }
+
+  div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+
+    @media screen and (min-width: 500px) {
+      padding-right: 0.5rem;
+      position: relative;
+
+      &::after,
+      &::before {
+        border: 4px solid transparent;
+        content: '';
+        display: block;
+        height: 0;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        width: 0;
+      }
+
+      &::before {
+        border-bottom-color: ${props => props.colors.upColor};
+        margin-top: -9px;
+      }
+
+      &::after {
+        border-top-color: ${props => props.colors.downColor};
+        margin-top: 1px;
+      }
+    }
+  }
 `;
 
 const Comparison = ({ current, options }) => {
@@ -20,15 +61,35 @@ const Comparison = ({ current, options }) => {
     }
   };
 
+  const sortArrows = (id, sortBy, ascending) => {
+    return {
+      upColor: id === sortBy && ascending ? 'var(--tf-blue)' : 'var(--gray)',
+      downColor: id === sortBy && !ascending ? 'var(--tf-blue)' : 'var(--gray)',
+    };
+  };
+
   return (
     <table>
       <thead>
         <tr>
-          <TH onClick={() => handleSort('id')}>Tax Reform Option</TH>
-          <TH onClick={() => handleSort('gdp')}>Long-Run Change in GDP</TH>
-          <TH onClick={() => handleSort('fte')}>Full-Time Equivalent Jobs</TH>
-          <TH onClick={() => handleSort('static')}>Static 10-Year Revenue (billions)</TH>
-          <TH onClick={() => handleSort('dynamic')}>Dynamic 10-Year Revenue (billions)</TH>
+          <TH colors={sortArrows('id', sortBy, ascending)} onClick={() => handleSort('id')}>
+            <div>Tax Reform Option</div>
+          </TH>
+          <TH colors={sortArrows('gdp', sortBy, ascending)} onClick={() => handleSort('gdp')}>
+            <div>Long-Run Change in GDP</div>
+          </TH>
+          <TH colors={sortArrows('fte', sortBy, ascending)} onClick={() => handleSort('fte')}>
+            <div>Full-Time Equivalent Jobs</div>
+          </TH>
+          <TH colors={sortArrows('static', sortBy, ascending)} onClick={() => handleSort('static')}>
+            <div>Static 10-Year Revenue (billions)</div>
+          </TH>
+          <TH
+            colors={sortArrows('dynamic', sortBy, ascending)}
+            onClick={() => handleSort('dynamic')}
+          >
+            <div>Dynamic 10-Year Revenue (billions)</div>
+          </TH>
         </tr>
       </thead>
       <tbody>
