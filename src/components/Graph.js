@@ -47,8 +47,8 @@ const Graph = ({ conventional, dynamic }) => {
     // nice: true,
   });
 
-  const conColor = '#ff0000';
-  const dynColor = '#0000ff';
+  const conColor = '#377eb8';
+  const dynColor = '#4daf4a';
   const colorScale = scaleOrdinal({
     domain: ['Conventional', 'Dynamic'],
     range: [conColor, dynColor],
@@ -60,7 +60,7 @@ const Graph = ({ conventional, dynamic }) => {
         <Text
           dx={(width - margin.left) / 2 + margin.left}
           dy={3}
-          style={{ fontWeight: 700 }}
+          style={{ fill: 'rgb(85,85,85)', fontWeight: 700 }}
           textAnchor="middle"
           verticalAnchor="start"
         >
@@ -69,14 +69,18 @@ const Graph = ({ conventional, dynamic }) => {
         <AxisLeft
           label="Change in GDP (Billions)"
           labelProps={{
-            style: { fontSize: '0.85rem' },
+            style: { ffill: 'rgb(85, 85, 85)', fontSize: '0.85rem' },
             textAnchor: 'middle',
           }}
           left={margin.left}
           scale={yScale}
           tickFormat={v => (+v < 0 ? `-$${Math.abs(v)}` : `$${+v}`)}
           tickLabelProps={() => {
-            return { style: { fontSize: '0.7rem', textAnchor: 'end' }, dy: 4, dx: -5 };
+            return {
+              style: { fill: 'rgb(85, 85, 85)', fontSize: '0.7rem', textAnchor: 'end' },
+              dy: 4,
+              dx: -5,
+            };
           }}
           top={margin.top}
         ></AxisLeft>
@@ -85,6 +89,7 @@ const Graph = ({ conventional, dynamic }) => {
           labelOffset={5}
           labelProps={{
             style: {
+              fill: 'rgb(85, 85, 85)',
               fontSize: '0.85rem',
             },
             textAnchor: 'middle',
@@ -94,7 +99,10 @@ const Graph = ({ conventional, dynamic }) => {
           orientation={max === 0 ? 'top' : 'bottom'}
           scale={xScale}
           tickLabelProps={() => {
-            return { style: { fontSize: '0.7rem', textAnchor: 'middle' }, dy: min <= 0 ? -3 : 3 };
+            return {
+              style: { fill: 'rgb(85, 85, 85)', fontSize: '0.7rem', textAnchor: 'middle' },
+              dy: min <= 0 ? -3 : 3,
+            };
           }}
           top={yScale(0) + margin.top}
           tickFormat={v => v}
