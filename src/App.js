@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
-      <Navigation options={options} setOption={setOption}></Navigation>
+      <Navigation option={option} options={options} setOption={setOption}></Navigation>
       {option === 'home' && <Home />}
       {option !== 'home' && optionData && <OptionLayout option={optionData} />}
       <Comparison
@@ -52,6 +52,7 @@ function App() {
             dynamic10YearRev: opt.data.dynamicRevenue.total,
           };
         })}
+        setOption={setOption}
       ></Comparison>
     </div>
   );

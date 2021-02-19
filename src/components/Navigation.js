@@ -3,10 +3,10 @@ import React from 'react';
 import HR from './HR';
 import OptionSelect from './OptionSelect';
 
-const Navigation = ({ options, setOption }) => {
+const Navigation = ({ option, options, setOption }) => {
   return (
     <div>
-      <OptionSelect options={options} setOption={setOption}></OptionSelect>
+      <OptionSelect option={option} options={options} setOption={setOption}></OptionSelect>
       <HR />
     </div>
   );

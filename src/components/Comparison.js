@@ -48,7 +48,12 @@ const TH = styled.th`
   }
 `;
 
-const Comparison = ({ current, options }) => {
+const OptionLink = styled.td`
+  color: var(--tf-blue);
+  cursor: pointer;
+`;
+
+const Comparison = ({ current, options, setOption }) => {
   const [sortBy, setSortBy] = useState('id');
   const [ascending, setAscending] = useState(true);
 
@@ -114,7 +119,12 @@ const Comparison = ({ current, options }) => {
           })
           .map(option => (
             <tr key={`option-table-${option.id}`}>
-              <td>{`Option ${option.id}: ${option.title}`}</td>
+              <OptionLink
+                onClick={() => {
+                  setOption(option.id);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >{`Option ${option.id}: ${option.title}`}</OptionLink>
               <NumericTableCell>{`${option.longRunGDP * 100}%`}</NumericTableCell>
               <NumericTableCell>{new Intl.NumberFormat().format(option.fteJobs)}</NumericTableCell>
               <NumericTableCell>

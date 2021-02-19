@@ -25,11 +25,16 @@ const Select = styled.select`
   width: 100%;
 `;
 
-const OptionSelect = ({ options, setOption }) => {
+const OptionSelect = ({ option, options, setOption }) => {
   return (
     <Container>
       <Heading>Choose a Tax Reform Option</Heading>
-      <Select name="option-select" id="option-select" onChange={e => setOption(e.target.value)}>
+      <Select
+        name="option-select"
+        id="option-select"
+        value={option}
+        onChange={e => setOption(e.target.value)}
+      >
         <option value="home">Options for Tax Reform Home Page</option>
         {options.map(option => (
           <option
