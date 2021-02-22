@@ -1,6 +1,7 @@
 ---
 id: 1
 title: Do a tax thing
+category: growth
 data: example01.csv
 ---
 

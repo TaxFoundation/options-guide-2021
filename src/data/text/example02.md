@@ -1,6 +1,7 @@
 ---
 id: 2
 title: Create a tax on taxes
+category: vulnerable
 data: example02.csv
 ---
 

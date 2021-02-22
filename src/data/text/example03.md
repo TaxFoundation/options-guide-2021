@@ -1,6 +1,7 @@
 ---
 id: 3
 title: Tax the Rich, but also the Middle Class and Poor
+category: predictable
 data: example03.csv
 ---
 
