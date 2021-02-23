@@ -27,6 +27,14 @@ const filterOutTotal = obj => {
 };
 
 const Option = ({ option }) => {
+  let graphData = filterOutTotal(option.data.conventionalRevenue).map((d, i) => {
+    return {
+      year: d.year,
+      conventional: d.value,
+      dynamic: filterOutTotal(option.data.dynamicRevenue).find(r => r.year === d.year).value,
+    };
+  });
+
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>
@@ -35,10 +43,7 @@ const Option = ({ option }) => {
       </h2>
       {/* TODO: sections with data */}
       <DataContainer>
-        <Graph
-          conventional={filterOutTotal(option.data.conventionalRevenue)}
-          dynamic={filterOutTotal(option.data.dynamicRevenue)}
-        ></Graph>
+        <Graph data={graphData}></Graph>
         <Table data={option.data}></Table>
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>

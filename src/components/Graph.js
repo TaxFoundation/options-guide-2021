@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text } from '@vx/text';
-import { LinePath } from '@vx/shape';
-import { scaleLinear, scaleOrdinal } from '@vx/scale';
+import { scaleLinear, scaleBand, scaleOrdinal } from '@vx/scale';
 import { Axis, AxisLeft } from '@vx/axis';
 import { LegendOrdinal } from '@vx/legend';
 import { ScaleSVG } from '@vx/responsive';
+import { Group } from '@vx/group';
 
 const Container = styled.div`
   border: 1px solid var(--gray);
@@ -17,15 +17,14 @@ const LegendContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-transform: capitalize;
 `;
 
-const Graph = ({ conventional, dynamic }) => {
-  const values = [...conventional.map(d => d.value), ...dynamic.map(d => d.value), 0];
-  const years = [...conventional.map(d => d.year), ...dynamic.map(d => d.year)];
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const yearMin = Math.min(...years);
-  const yearMax = Math.max(...years);
+const Graph = ({ data }) => {
+  const years = [...data.map(d => d.year)].sort((a, b) => a - b);
+  const values = [...data.map(d => d.conventional), ...data.map(d => d.dynamic)];
+  const min = Math.min(...values, 0);
+  const max = Math.max(...values, 0);
 
   const width = 600;
   const height = 400;
@@ -33,24 +32,33 @@ const Graph = ({ conventional, dynamic }) => {
     bottom: min < 0 ? 20 : 40,
     left: 70,
     right: 20,
-    top: min < 0 ? 40 : 20,
+    top: min < 0 ? 60 : 20,
   };
+
+  const keys = ['conventional', 'dynamic'];
 
   const yScale = scaleLinear({
     domain: [max, min],
-    range: [margin.top, height - margin.top - margin.bottom],
+    range: [0, height - margin.top - margin.bottom],
     // nice: true,
   });
-  const xScale = scaleLinear({
-    domain: [yearMin, yearMax],
+  const yearScale = scaleBand({
+    domain: years,
     range: [0, width - margin.left - margin.right],
-    // nice: true,
+    round: true,
+    padding: 0.2,
+  });
+  const typeScale = scaleBand({
+    domain: keys,
+    range: [0, yearScale.bandwidth()],
+    round: true,
+    padding: 0.1,
   });
 
   const conColor = '#377eb8';
   const dynColor = '#4daf4a';
   const colorScale = scaleOrdinal({
-    domain: ['Conventional', 'Dynamic'],
+    domain: keys,
     range: [conColor, dynColor],
   });
 
@@ -66,6 +74,30 @@ const Graph = ({ conventional, dynamic }) => {
         >
           Change in GDP Over 10 Years (Billions)
         </Text>
+        <Group>
+          {data.map(y => {
+            return (
+              <Group
+                key={`year-group-${y.year}`}
+                left={yearScale(y.year) + margin.left}
+                top={margin.top}
+              >
+                {keys.map((k, i) => {
+                  return (
+                    <rect
+                      key={`${k}-${y.year}`}
+                      width={typeScale.bandwidth()}
+                      fill={colorScale(k)}
+                      height={min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])}
+                      x={typeScale(k)}
+                      y={Math.min(yScale(y[k]), yScale(0))}
+                    ></rect>
+                  );
+                })}
+              </Group>
+            );
+          })}
+        </Group>
         <AxisLeft
           label="Change in GDP (Billions)"
           labelProps={{
@@ -97,7 +129,7 @@ const Graph = ({ conventional, dynamic }) => {
           }}
           left={margin.left}
           orientation={max === 0 ? 'top' : 'bottom'}
-          scale={xScale}
+          scale={yearScale}
           tickLabelProps={() => {
             return {
               style: { fill: 'rgb(85, 85, 85)', fontSize: '0.7rem', textAnchor: 'middle' },
@@ -107,20 +139,6 @@ const Graph = ({ conventional, dynamic }) => {
           top={yScale(0) + margin.top}
           tickFormat={v => v}
         ></Axis>
-        <LinePath
-          data={conventional}
-          x={d => xScale(d.year) + margin.left}
-          y={d => yScale(d.value) + margin.top}
-          stroke={conColor}
-          strokeWidth={3}
-        ></LinePath>
-        <LinePath
-          data={dynamic}
-          x={d => xScale(d.year) + margin.left}
-          y={d => yScale(d.value) + margin.top}
-          stroke={dynColor}
-          strokeWidth={3}
-        ></LinePath>
       </ScaleSVG>
       <LegendContainer>
         <LegendOrdinal scale={colorScale} itemMargin="0 20px" direction="row" />
