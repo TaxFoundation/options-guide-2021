@@ -35,7 +35,14 @@ const Graph = ({ data }) => {
     top: min < 0 ? 60 : 20,
   };
 
+  const title = 'Change in GDP Over 10 Years (Billions)';
   const keys = ['conventional', 'dynamic'];
+  const currencyFormatter = number =>
+    new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumSignificantDigits: 3,
+    }).format(number);
 
   const yScale = scaleLinear({
     domain: [max, min],
@@ -65,6 +72,7 @@ const Graph = ({ data }) => {
   return (
     <Container>
       <ScaleSVG width={width} height={height}>
+        <title>{title}</title>
         <Text
           dx={(width - margin.left) / 2 + margin.left}
           dy={3}
@@ -72,7 +80,7 @@ const Graph = ({ data }) => {
           textAnchor="middle"
           verticalAnchor="start"
         >
-          Change in GDP Over 10 Years (Billions)
+          {title}
         </Text>
         <Group>
           {data.map(y => {
@@ -84,14 +92,19 @@ const Graph = ({ data }) => {
               >
                 {keys.map((k, i) => {
                   return (
-                    <rect
-                      key={`${k}-${y.year}`}
-                      width={typeScale.bandwidth()}
-                      fill={colorScale(k)}
-                      height={min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])}
-                      x={typeScale(k)}
-                      y={Math.min(yScale(y[k]), yScale(0))}
-                    ></rect>
+                    <Group>
+                      <title>{`${currencyFormatter(y[k])} billion change in GDP in ${
+                        y.year
+                      } by ${k} calculations.`}</title>
+                      <rect
+                        key={`${k}-${y.year}`}
+                        width={typeScale.bandwidth()}
+                        fill={colorScale(k)}
+                        height={min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])}
+                        x={typeScale(k)}
+                        y={Math.min(yScale(y[k]), yScale(0))}
+                      ></rect>
+                    </Group>
                   );
                 })}
               </Group>
