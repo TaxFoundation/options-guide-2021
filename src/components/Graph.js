@@ -92,12 +92,11 @@ const Graph = ({ data }) => {
               >
                 {keys.map((k, i) => {
                   return (
-                    <Group>
+                    <Group key={`${k}-${y.year}`}>
                       <title>{`${currencyFormatter(y[k])} billion change in GDP in ${
                         y.year
                       } by ${k} calculations.`}</title>
                       <rect
-                        key={`${k}-${y.year}`}
                         width={typeScale.bandwidth()}
                         fill={colorScale(k)}
                         height={min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])}

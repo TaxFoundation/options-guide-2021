@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
+import { useQueryParams } from './helpers';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import OptionLayout from './components/OptionLayout';
@@ -21,12 +22,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  // todo set option state according to pae query val
-  const [option, setOption] = useState('home');
+  console.log(useQueryParams);
+  const [option, setOption] = useQueryParams('option', 'home');
   const [optionData, setOptionData] = useState(null);
 
   useEffect(() => {
-    // todo fetch option data on request
     if (option !== 'home') {
       setOptionData(options.find(opt => opt.id === option));
     } else {
