@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import HR from './HR';
 import Graph from './Graph';
-import Table from './Table';
+import SummaryData from './SummaryData';
 
 const OptionNumber = styled.span`
   color: var(--tf-blue);
@@ -44,7 +44,7 @@ const Option = ({ option }) => {
       {/* TODO: sections with data */}
       <DataContainer>
         <Graph data={graphData}></Graph>
-        <Table data={option.data}></Table>
+        <SummaryData data={option.data}></SummaryData>
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />

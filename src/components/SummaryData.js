@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
+import { dollarFormat, percentFormat } from '../helpers';
 
 const Container = styled.div`
   display: grid;
@@ -11,8 +12,22 @@ const Container = styled.div`
 const Effects = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   justify-items: center;
+`;
+
+const EffectsList = styled.ul`
+  display: grid;
+  grid-template: auto / repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  grid-gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 const EffectStatistic = styled.span`
@@ -46,42 +61,64 @@ const Table = ({ data }) => {
     <Container>
       <Effects>
         <div>
-          <h3>Economic Effects</h3>
-          <p>
-            <EffectStatistic>
-              {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${100 * data.longRunEconomic.gdp}%`}
-            </EffectStatistic>{' '}
-            Long-Run Change in GDP
-          </p>
-          <p>
-            <EffectStatistic>
-              {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${new Intl.NumberFormat().format(
-                data.longRunEconomic.fullTimeEquivalentJobs,
-              )}`}
-            </EffectStatistic>{' '}
-            Full-Time Equivalent Jobs
-          </p>
+          <h3>Budgetary Effects</h3>
+          <EffectsList>
+            <li>
+              <EffectStatistic>
+                {dollarFormat(data.conventionalRevenue.total)} Billion
+              </EffectStatistic>{' '}
+              Static 10-Year Revenue
+            </li>
+            <li>
+              <EffectStatistic>{dollarFormat(data.dynamicRevenue.total)} Billion</EffectStatistic>{' '}
+              Dynamic 10-Year Revenue
+            </li>
+          </EffectsList>
         </div>
         <div>
-          <h3>Budgetary Effects</h3>
-          <p>
-            <EffectStatistic>
-              {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
-                data.conventionalRevenue.total,
-              )}{' '}
-              Billion
-            </EffectStatistic>{' '}
-            Static 10-Year Revenue
-          </p>
-          <p>
-            <EffectStatistic>
-              {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
-                data.dynamicRevenue.total,
-              )}{' '}
-              Billion
-            </EffectStatistic>{' '}
-            Dynamic 10-Year Revenue
-          </p>
+          <h3>Economic Effects</h3>
+          <EffectsList>
+            <li>
+              <EffectStatistic>
+                {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${percentFormat(
+                  data.longRunEconomic.gdp,
+                )}`}
+              </EffectStatistic>{' '}
+              Long-Run Change in GDP
+            </li>
+            <li>
+              <EffectStatistic>
+                {`${data.longRunEconomic.gnp >= 0 ? '+' : ''}${percentFormat(
+                  data.longRunEconomic.gnp,
+                )}`}
+              </EffectStatistic>{' '}
+              Long-Run Change in GNP
+            </li>
+            <li>
+              <EffectStatistic>
+                {`${data.longRunEconomic.capitalStock >= 0 ? '+' : ''}${percentFormat(
+                  data.longRunEconomic.capitalStock,
+                )}`}
+              </EffectStatistic>{' '}
+              Long-Run Change in Capital Stock
+            </li>
+            <li>
+              <EffectStatistic>
+                {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${new Intl.NumberFormat().format(
+                  data.longRunEconomic.fullTimeEquivalentJobs,
+                )}`}
+              </EffectStatistic>{' '}
+              Full-Time Equivalent Jobs
+            </li>
+            <li>
+              <EffectStatistic>
+                {`${data.longRunEconomic.wageRate >= 0 ? '+' : ''}${percentFormat(
+                  data.longRunEconomic.wageRate,
+                )}`}
+              </EffectStatistic>{' '}
+              Long-Run Change in Wage Rate
+            </li>
+          </EffectsList>
         </div>
       </Effects>
       <StyledTable>
