@@ -11,14 +11,18 @@ const Container = styled.div`
 
 const Effects = styled.div`
   display: grid;
-  grid-gap: 1rem;
-  grid-template-rows: repeat(2, auto);
-  justify-items: center;
+  grid-gap: 2rem;
+  text-align: center;
+
+  h3 {
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 0.5rem;
+  }
 `;
 
 const EffectsList = styled.ul`
   display: grid;
-  grid-template: auto / repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  grid-template: auto / repeat(auto-fit, minmax(min(180px, 100%), 1fr));
   grid-gap: 1rem;
   list-style: none;
   margin: 0;
@@ -84,7 +88,7 @@ const Table = ({ data }) => {
                   data.longRunEconomic.gdp,
                 )}`}
               </EffectStatistic>{' '}
-              Long-Run Change in GDP
+              Gross Domestic Product
             </li>
             <li>
               <EffectStatistic>
@@ -92,7 +96,7 @@ const Table = ({ data }) => {
                   data.longRunEconomic.gnp,
                 )}`}
               </EffectStatistic>{' '}
-              Long-Run Change in GNP
+              Gross National Product
             </li>
             <li>
               <EffectStatistic>
@@ -100,7 +104,7 @@ const Table = ({ data }) => {
                   data.longRunEconomic.capitalStock,
                 )}`}
               </EffectStatistic>{' '}
-              Long-Run Change in Capital Stock
+              Capital Stock
             </li>
             <li>
               <EffectStatistic>
@@ -116,7 +120,7 @@ const Table = ({ data }) => {
                   data.longRunEconomic.wageRate,
                 )}`}
               </EffectStatistic>{' '}
-              Long-Run Change in Wage Rate
+              Wage Rate
             </li>
           </EffectsList>
         </div>
