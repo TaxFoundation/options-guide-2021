@@ -13,10 +13,16 @@ const Effects = styled.div`
   display: grid;
   grid-gap: 2rem;
   text-align: center;
+`;
+
+const Effect = styled.div`
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  padding-bottom: 1rem;
 
   h3 {
     border-bottom: 1px solid var(--gray);
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
   }
 `;
 
@@ -64,7 +70,7 @@ const Table = ({ data }) => {
   return (
     <Container>
       <Effects>
-        <div>
+        <Effect>
           <h3>Budgetary Effects</h3>
           <EffectsList>
             <li>
@@ -78,8 +84,8 @@ const Table = ({ data }) => {
               Dynamic 10-Year Revenue
             </li>
           </EffectsList>
-        </div>
-        <div>
+        </Effect>
+        <Effect>
           <h3>Economic Effects</h3>
           <EffectsList>
             <li>
@@ -123,7 +129,7 @@ const Table = ({ data }) => {
               Wage Rate
             </li>
           </EffectsList>
-        </div>
+        </Effect>
       </Effects>
       <StyledTable>
         <thead>
