@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  console.log(useQueryParams);
   const [option, setOption] = useQueryParams('option', 'home');
   const [optionData, setOptionData] = useState(null);
 

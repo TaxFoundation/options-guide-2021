@@ -1,6 +1,6 @@
 ---
 id: 4
-title: Taxes 2: Electric Boogaloo
+title: Taxes 2, Electric Boogaloo
 category: deficit
 data: example01.csv
 ---

@@ -15,11 +15,7 @@
     "@vx/scale": "^0.0.199",
     "@vx/shape": "^0.0.199",
     "d3-dsv": "^2.0.0",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "fs-extra": "^9.0.1",
     "lodash": "^4.17.20",
-    "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -27,9 +23,18 @@
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "fs-extra": "^9.0.1",
+    "prettier": "^2.2.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently -c \"magenta,cyan\" --names \"Data,React\" \"npm run watch-data\" \"react-scripts start\"",
+    "build": "npm run build-data && react-scripts build",
+    "build-data": "node ./src/convertData.js",
+    "watch-data": "node ./src/convertData.js --watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,9 +44,13 @@
       "react-app/jest",
       "plugin:prettier/recommended"
     ],
-    "plugins": ["prettier"],
+    "plugins": [
+      "prettier"
+    ],
     "rules": {
-      "prettier/prettier": ["warn"]
+      "prettier/prettier": [
+        "warn"
+      ]
     }
   },
   "browserslist": {
