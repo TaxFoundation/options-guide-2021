@@ -1,14 +1,14 @@
 ---
 id: 1
-title: Option 1
+title: Lower Individual Income Tax Rates Across the Board
 category: growth
 data:
   - file: option_1_10_percent.csv
-    name: 10%
+    name: Lower 10%
   - file: option_1_15_percent.csv
-    name: 15%
+    name: Lower 15%
   - file: option_1_20_percent.csv
-    name: 20%
+    name: Lower 20%
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

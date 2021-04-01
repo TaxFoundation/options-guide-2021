@@ -1,14 +1,14 @@
 ---
 id: 6
-title: Option 6
+title: Reduce Both the Employer-Side and Employee-Side Payroll Tax
 category: growth
 data:
   - file: option_6_split1ppcut.csv
-    name: Split 1 Papercut?
+    name: 1 Percentage Point Split
   - file: option_6_split2ppcut.csv
-    name: Split 2 Papercut?
+    name: 2 Percentage Point Split
   - file: option_6_split3ppcut.csv
-    name: Split 3 Papercut?
+    name: 3 Percentage Point Split
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

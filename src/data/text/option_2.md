@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Option 2
+title: Lower the Top Marginal Income Tax Rate
 category: growth
 data:
   - file: option_2_25_toprate.csv

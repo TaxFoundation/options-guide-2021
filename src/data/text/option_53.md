@@ -1,12 +1,12 @@
 ---
 id: 53
-title: Option 53
+title: Increase the Gas Tax Inflation Adjust Going Forward
 category: growth
 data:
   - file: option_53_15gastax.csv
-    name: 15% Gas Tax
+    name: 15 Cent per Gallon Gas Tax
   - file: option_53_35gastax.csv
-    name: 35% Gas Tax
+    name: 35 Cent per Gallon Gas Tax
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

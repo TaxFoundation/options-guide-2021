@@ -1,10 +1,10 @@
 ---
-id: 63
-title: Restore the Personal Exemption
+id: 39
+title: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
 category: growth
 data:
-  - file: option_63_PE.csv
-    name: Restore the Personal Exemption
+  - file: option_39_payroll_over_$400K.csv
+    name: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
