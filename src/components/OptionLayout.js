@@ -26,17 +26,19 @@ const filterOutTotal = obj => {
     });
 };
 
-const Option = ({ option }) => {
-  const [subOption, setSubOption] = useState(option.data[0]);
-  let graphData = filterOutTotal(subOption.conventionalRevenue).map((d, i) => {
+const generateGraphData = data => {
+  return filterOutTotal(data.conventionalRevenue).map((d, i) => {
     return {
       year: d.year,
       conventional: d.value,
-      dynamic: filterOutTotal(subOption.dynamicRevenue).find(
-        r => r.year === d.year,
-      ).value,
+      dynamic: filterOutTotal(data.dynamicRevenue).find(r => r.year === d.year)
+        .value,
     };
   });
+};
+
+const Option = ({ option }) => {
+  const [subOption, setSubOption] = useState(0);
 
   return (
     <div>
@@ -48,18 +50,18 @@ const Option = ({ option }) => {
       <DataContainer>
         <div>
           {option.data.length > 1 &&
-            option.data.map(d => (
+            option.data.map((d, i) => (
               <button
                 onClick={() => {
-                  setSubOption(option.data.find(o => o.name === d.name));
+                  setSubOption(i);
                 }}
               >
                 {d.name}
               </button>
             ))}
         </div>
-        <Graph data={graphData}></Graph>
-        <SummaryData data={subOption}></SummaryData>
+        <Graph data={generateGraphData(option.data[subOption])}></Graph>
+        <SummaryData data={option.data[subOption]}></SummaryData>
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />
