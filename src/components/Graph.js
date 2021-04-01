@@ -22,7 +22,10 @@ const LegendContainer = styled.div`
 
 const Graph = ({ data }) => {
   const years = [...data.map(d => d.year)].sort((a, b) => a - b);
-  const values = [...data.map(d => d.conventional), ...data.map(d => d.dynamic)];
+  const values = [
+    ...data.map(d => d.conventional),
+    ...data.map(d => d.dynamic),
+  ];
   const min = Math.min(...values, 0);
   const max = Math.max(...values, 0);
 
@@ -35,7 +38,7 @@ const Graph = ({ data }) => {
     top: min < 0 ? 60 : 20,
   };
 
-  const title = 'Change in GDP Over 10 Years (Billions)';
+  const title = 'Change in Government Revenue Over 10 Years (Billions)';
   const keys = ['conventional', 'dynamic'];
   const currencyFormatter = number =>
     new Intl.NumberFormat('en-US', {
@@ -93,13 +96,17 @@ const Graph = ({ data }) => {
                 {keys.map((k, i) => {
                   return (
                     <Group key={`${k}-${y.year}`}>
-                      <title>{`${currencyFormatter(y[k])} billion change in GDP in ${
+                      <title>{`${currencyFormatter(
+                        y[k],
+                      )} billion change in GDP in ${
                         y.year
                       } by ${k} calculations.`}</title>
                       <rect
                         width={typeScale.bandwidth()}
                         fill={colorScale(k)}
-                        height={min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])}
+                        height={
+                          min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])
+                        }
                         x={typeScale(k)}
                         y={Math.min(yScale(y[k]), yScale(0))}
                       ></rect>
@@ -111,8 +118,9 @@ const Graph = ({ data }) => {
           })}
         </Group>
         <AxisLeft
-          label="Change in GDP (Billions)"
+          label="Change in Revenue (Billions)"
           labelProps={{
+            dx: -5,
             style: { ffill: 'rgb(85, 85, 85)', fontSize: '0.85rem' },
             textAnchor: 'middle',
           }}
@@ -121,7 +129,11 @@ const Graph = ({ data }) => {
           tickFormat={v => (+v < 0 ? `-$${Math.abs(v)}` : `$${+v}`)}
           tickLabelProps={() => {
             return {
-              style: { fill: 'rgb(85, 85, 85)', fontSize: '0.7rem', textAnchor: 'end' },
+              style: {
+                fill: 'rgb(85, 85, 85)',
+                fontSize: '0.7rem',
+                textAnchor: 'end',
+              },
               dy: 4,
               dx: -5,
             };
@@ -144,7 +156,11 @@ const Graph = ({ data }) => {
           scale={yearScale}
           tickLabelProps={() => {
             return {
-              style: { fill: 'rgb(85, 85, 85)', fontSize: '0.7rem', textAnchor: 'middle' },
+              style: {
+                fill: 'rgb(85, 85, 85)',
+                fontSize: '0.7rem',
+                textAnchor: 'middle',
+              },
               dy: min <= 0 ? -3 : 3,
             };
           }}

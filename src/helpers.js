@@ -8,10 +8,14 @@ const dollarFormat = number =>
     number,
   );
 
-const percentFormat = number =>
-  `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format(
-    number * 100,
-  )}%`;
+const percentFormat = number => {
+  const precision = number <= 0.0001 ? 2 : 1;
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'percent',
+    maximumFractionDigits: precision,
+  });
+  return formatter.format(number);
+};
 
 const getQuery = () => {
   if (typeof window !== 'undefined') {

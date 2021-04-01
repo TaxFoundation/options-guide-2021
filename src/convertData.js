@@ -35,9 +35,10 @@ function buildData() {
         const indicator = _.camelCase(d['Indicator']);
         const subIndicator = _.camelCase(
           d['Sub-indicator']
-            .replace(/\.0?%/, '')
+            .replace(/\.0?%/g, '')
             .replace(' - ', 'To')
-            .replace('2022To2031', 'total'),
+            .replace('2022To2031', 'total')
+            .replace('TOTAL FOR ALL', 'total'),
         );
         if (!csvData[indicator]) {
           csvData[indicator] = {};
