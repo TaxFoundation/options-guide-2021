@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
+import { wholeNumberFormat, percentFormat, dollarFormat } from '../helpers';
 
 const TH = styled.th`
   background-color: white !important;
@@ -143,23 +144,17 @@ const Comparison = ({ current, options, setOption }) => {
               >
                 {option.title}
               </OptionLink>
-              <NumericTableCell>{`${
-                option.longRunGDP * 100
-              }%`}</NumericTableCell>
               <NumericTableCell>
-                {new Intl.NumberFormat().format(option.fteJobs)}
+                {percentFormat(option.longRunGDP)}
               </NumericTableCell>
               <NumericTableCell>
-                {new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                }).format(option.static10YearRev)}
+                {wholeNumberFormat(option.fteJobs)}
               </NumericTableCell>
               <NumericTableCell>
-                {new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                }).format(option.dynamic10YearRev)}
+                {dollarFormat(option.static10YearRev)}
+              </NumericTableCell>
+              <NumericTableCell>
+                {dollarFormat(option.dynamic10YearRev)}
               </NumericTableCell>
             </tr>
           ))}

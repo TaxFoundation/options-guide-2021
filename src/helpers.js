@@ -1,10 +1,17 @@
 import { useState } from 'react';
 
+const wholeNumberFormat = number =>
+  new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(number);
+
 const dollarFormat = number =>
-  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(number);
+  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+    number,
+  );
 
 const percentFormat = number =>
-  `${new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 }).format(number * 100)}%`;
+  `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format(
+    number * 100,
+  )}%`;
 
 const getQuery = () => {
   if (typeof window !== 'undefined') {
@@ -40,4 +47,4 @@ const useQueryParams = (key, defaultVal) => {
   return [query, updateUrl];
 };
 
-export { dollarFormat, percentFormat, useQueryParams };
+export { wholeNumberFormat, dollarFormat, percentFormat, useQueryParams };
