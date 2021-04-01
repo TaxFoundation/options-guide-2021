@@ -61,6 +61,7 @@ const Option = ({ option }) => {
           {option.data.length > 1 &&
             option.data.map((d, i) => (
               <Button
+                active={i === subOption}
                 onClick={() => {
                   setSubOption(i);
                 }}

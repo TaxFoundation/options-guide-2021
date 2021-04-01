@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background: #0094ff;
+  background: ${props => (props.active ? '#0094ff' : 'white')};
   border: solid 1px #0094ff;
-  color: white;
+  color: ${props => (props.active ? 'white' : '#0094ff')};
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
