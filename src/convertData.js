@@ -33,7 +33,12 @@ function buildData() {
       const csv = fs.readFileSync(path.join(DATA_SOURCE, file), 'utf8');
       d3.csvParse(csv, d => {
         const indicator = _.camelCase(d['Indicator']);
-        const subIndicator = _.camelCase(d['Sub-indicator']);
+        const subIndicator = _.camelCase(
+          d['Sub-indicator']
+            .replace(/\.0?%/, '')
+            .replace(' - ', 'To')
+            .replace('2022To2031', 'total'),
+        );
         if (!csvData[indicator]) {
           csvData[indicator] = {};
         }
