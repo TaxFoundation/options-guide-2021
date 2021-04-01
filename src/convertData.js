@@ -21,7 +21,7 @@ function buildData() {
     console.log(`Reading ${file}...`);
     let option = {};
     const text = fs.readFileSync(path.join(TEXT_SOURCE, file), 'utf8');
-    const converter = new showdown.Converter();
+    const converter = new showdown.Converter({ metadata: true });
     const html = converter.makeHtml(text);
     const { data: metadata } = matter(text);
     option.id = metadata.id;
@@ -42,7 +42,10 @@ function buildData() {
       option.data.push(csvData);
     });
     compiledData.push(option);
-    fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
+    fs.writeFileSync(
+      path.join(DEST, `${option.id}.json`),
+      JSON.stringify(option),
+    );
     console.log(`Finished parsing ${file}.`);
   }
   fs.writeFileSync(path.join(DEST, `data.json`), JSON.stringify(compiledData));

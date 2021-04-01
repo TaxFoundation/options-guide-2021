@@ -6,9 +6,9 @@ data:
   - file: option_37_split1ppincrease.csv
     name: Split 1 PP Increase
   - file: option_37_split2ppincrease.csv
-    name: Split 1 PP Increase
+    name: Split 2 PP Increase
   - file: option_37_split3ppincrease.csv
-    name: Split 1 PP Increase
+    name: Split 3 PP Increase
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
