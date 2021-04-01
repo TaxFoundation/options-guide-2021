@@ -1,0 +1,58 @@
+Indicator,Sub-indicator,Value
+Long-run Economic,GDP,0.000303225
+Long-run Economic,GNP,0.000602643
+Long-run Economic,Capital Stock,-0.000529569
+Long-run Economic,Wage Rate,-0.000322713
+Long-run Economic,Full-Time Equivalent Jobs,69883.01981
+Conventional Revenue,2022,-80.7
+Conventional Revenue,2023,-84.96
+Conventional Revenue,2024,-88.42
+Conventional Revenue,2025,-93.58
+Conventional Revenue,2026,-39.43
+Conventional Revenue,2027,-43.28
+Conventional Revenue,2028,-45.11
+Conventional Revenue,2029,-46.95
+Conventional Revenue,2030,-48.85
+Conventional Revenue,2031,-51.38
+Conventional Revenue,2022 - 2031,-622.66
+Dynamic Revenue,2022,-70.58
+Dynamic Revenue,2023,-74.39
+Dynamic Revenue,2024,-77.89
+Dynamic Revenue,2025,-82.83
+Dynamic Revenue,2026,-35.86
+Dynamic Revenue,2027,-39.47
+Dynamic Revenue,2028,-41.44
+Dynamic Revenue,2029,-43.21
+Dynamic Revenue,2030,-45.19
+Dynamic Revenue,2031,-47.65
+Dynamic Revenue,2022 - 2031,-558.51
+2022 Conventional Distribution,0% - 20.0%,0.0001
+2022 Conventional Distribution,20.0% - 40.0%,0.0083
+2022 Conventional Distribution,40.0% - 60.0%,0.0112
+2022 Conventional Distribution,60.0% - 80.0%,0.009
+2022 Conventional Distribution,80.0% - 100%,0.0041
+2022 Conventional Distribution,80.0% - 90.0%,0.0077
+2022 Conventional Distribution,90.0% - 95.0%,0.0054
+2022 Conventional Distribution,95.0% - 99.0%,0.0029
+2022 Conventional Distribution,99.0% - 100%,0.0006
+2022 Conventional Distribution,TOTAL FOR ALL,0.0064
+2031 Conventional Distribution,0% - 20.0%,0.0011
+2031 Conventional Distribution,20.0% - 40.0%,0.006
+2031 Conventional Distribution,40.0% - 60.0%,0.0065
+2031 Conventional Distribution,60.0% - 80.0%,0.0038
+2031 Conventional Distribution,80.0% - 100%,0.0009
+2031 Conventional Distribution,80.0% - 90.0%,0.0022
+2031 Conventional Distribution,90.0% - 95.0%,0.0009
+2031 Conventional Distribution,95.0% - 99.0%,0.0003
+2031 Conventional Distribution,99.0% - 100%,0.0001
+2031 Conventional Distribution,TOTAL FOR ALL,0.0027
+Long-run Dynamic Distribution,0% - 20.0%,0.0011
+Long-run Dynamic Distribution,20.0% - 40.0%,0.006
+Long-run Dynamic Distribution,40.0% - 60.0%,0.0065
+Long-run Dynamic Distribution,60.0% - 80.0%,0.0038
+Long-run Dynamic Distribution,80.0% - 100%,0.0009
+Long-run Dynamic Distribution,80.0% - 90.0%,0.0022
+Long-run Dynamic Distribution,90.0% - 95.0%,0.0009
+Long-run Dynamic Distribution,95.0% - 99.0%,0.0003
+Long-run Dynamic Distribution,99.0% - 100%,0.0001
+Long-run Dynamic Distribution,TOTAL FOR ALL,0.0027

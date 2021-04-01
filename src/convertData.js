@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const matter = require('gray-matter');
 const showdown = require('showdown');
 const d3 = require('d3-dsv');
 const _ = require('lodash');
@@ -19,25 +20,29 @@ function buildData() {
     const file = files[i];
     console.log(`Reading ${file}...`);
     let option = {};
-    const converter = new showdown.Converter({ metadata: true });
     const text = fs.readFileSync(path.join(TEXT_SOURCE, file), 'utf8');
+    const converter = new showdown.Converter();
     const html = converter.makeHtml(text);
-    const meta = converter.getMetadata();
-    option.id = meta.id;
-    option.title = meta.title;
+    const { data: metadata } = matter(text);
+    option.id = metadata.id;
+    option.title = metadata.title;
     option.text = html;
-    option.data = {};
-    const csv = fs.readFileSync(path.join(DATA_SOURCE, meta.data), 'utf8');
-    d3.csvParse(csv, d => {
-      const indicator = _.camelCase(d['Indicator']);
-      const subIndicator = _.camelCase(d['Sub-indicator']);
-      if (!option.data[indicator]) {
-        option.data[indicator] = {};
-      }
-      option.data[indicator][subIndicator] = d.Value.replace('$', '');
+    option.data = [];
+    metadata.data.forEach(({ file, name }) => {
+      const csvData = { name };
+      const csv = fs.readFileSync(path.join(DATA_SOURCE, file), 'utf8');
+      d3.csvParse(csv, d => {
+        const indicator = _.camelCase(d['Indicator']);
+        const subIndicator = _.camelCase(d['Sub-indicator']);
+        if (!csvData[indicator]) {
+          csvData[indicator] = {};
+        }
+        csvData[indicator][subIndicator] = d.Value.replace('$', '');
+      });
+      option.data.push(csvData);
     });
     compiledData.push(option);
-    // fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
+    fs.writeFileSync(path.join(DEST, `${option.id}.json`), JSON.stringify(option));
     console.log(`Finished parsing ${file}.`);
   }
   fs.writeFileSync(path.join(DEST, `data.json`), JSON.stringify(compiledData));
