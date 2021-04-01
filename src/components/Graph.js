@@ -98,7 +98,7 @@ const Graph = ({ data }) => {
                     <Group key={`${k}-${y.year}`}>
                       <title>{`${currencyFormatter(
                         y[k],
-                      )} billion change in GDP in ${
+                      )} billion change in Revenue in ${
                         y.year
                       } by ${k} calculations.`}</title>
                       <rect

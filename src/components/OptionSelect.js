@@ -61,12 +61,14 @@ const OptionSelect = ({ option, options, setOption }) => {
           onChange={e => setOption(e.target.value)}
         >
           <option value="home">Options for Tax Reform Home Page</option>
-          {options.map(option => (
-            <option
-              key={`option-${option.id}`}
-              value={option.id}
-            >{`Option ${option.id}: ${option.title}`}</option>
-          ))}
+          {options
+            .sort((a, b) => a.id - b.id)
+            .map(option => (
+              <option
+                key={`option-${option.id}`}
+                value={option.id}
+              >{`Option ${option.id}: ${option.title}`}</option>
+            ))}
         </Select>
       </SelectContainer>
     </Container>
