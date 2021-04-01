@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+import Button from './Button';
 import HR from './HR';
 import Graph from './Graph';
 import SummaryData from './SummaryData';
@@ -10,6 +11,11 @@ const OptionNumber = styled.span`
   display: block;
   font-size: 1.2rem;
   text-transform: uppercase;
+`;
+
+const SubOptionButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
 `;
 
 const DataContainer = styled.div`
@@ -40,28 +46,35 @@ const generateGraphData = data => {
 const Option = ({ option }) => {
   const [subOption, setSubOption] = useState(0);
 
+  useEffect(() => {
+    setSubOption(0);
+  }, [option]);
+
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>
         <OptionNumber>Option {option.id}</OptionNumber>
         {option.title}
       </h2>
-      {/* TODO: sections with data */}
       <DataContainer>
-        <div>
+        <SubOptionButtonsContainer>
           {option.data.length > 1 &&
             option.data.map((d, i) => (
-              <button
+              <Button
                 onClick={() => {
                   setSubOption(i);
                 }}
               >
                 {d.name}
-              </button>
+              </Button>
             ))}
-        </div>
-        <Graph data={generateGraphData(option.data[subOption])}></Graph>
-        <SummaryData data={option.data[subOption]}></SummaryData>
+        </SubOptionButtonsContainer>
+        {option.data[subOption] && (
+          <>
+            <Graph data={generateGraphData(option.data[subOption])}></Graph>
+            <SummaryData data={option.data[subOption]}></SummaryData>
+          </>
+        )}
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />
