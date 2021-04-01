@@ -80,7 +80,9 @@ const Table = ({ data }) => {
               Static 10-Year Revenue
             </li>
             <li>
-              <EffectStatistic>{dollarFormat(data.dynamicRevenue.total)} Billion</EffectStatistic>{' '}
+              <EffectStatistic>
+                {dollarFormat(data.dynamicRevenue.total)} Billion
+              </EffectStatistic>{' '}
               Dynamic 10-Year Revenue
             </li>
           </EffectsList>
@@ -106,15 +108,17 @@ const Table = ({ data }) => {
             </li>
             <li>
               <EffectStatistic>
-                {`${data.longRunEconomic.capitalStock >= 0 ? '+' : ''}${percentFormat(
-                  data.longRunEconomic.capitalStock,
-                )}`}
+                {`${
+                  data.longRunEconomic.capitalStock >= 0 ? '+' : ''
+                }${percentFormat(data.longRunEconomic.capitalStock)}`}
               </EffectStatistic>{' '}
               Capital Stock
             </li>
             <li>
               <EffectStatistic>
-                {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${new Intl.NumberFormat().format(
+                {`${
+                  data.longRunEconomic.gdp >= 0 ? '+' : ''
+                }${new Intl.NumberFormat().format(
                   data.longRunEconomic.fullTimeEquivalentJobs,
                 )}`}
               </EffectStatistic>{' '}
@@ -122,9 +126,9 @@ const Table = ({ data }) => {
             </li>
             <li>
               <EffectStatistic>
-                {`${data.longRunEconomic.wageRate >= 0 ? '+' : ''}${percentFormat(
-                  data.longRunEconomic.wageRate,
-                )}`}
+                {`${
+                  data.longRunEconomic.wageRate >= 0 ? '+' : ''
+                }${percentFormat(data.longRunEconomic.wageRate)}`}
               </EffectStatistic>{' '}
               Wage Rate
             </li>
@@ -147,8 +151,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>0% to 20%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['0To20']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['0To20']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['0To20']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['0To20']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -157,8 +165,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>20% to 40%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['20To40']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['20To40']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['20To40']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['20To40']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -167,8 +179,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>40% to 60%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['40To60']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['40To60']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['40To60']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['40To60']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -177,8 +193,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>60% to 80%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['60To80']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['60To80']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['60To80']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['60To80']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -187,8 +207,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>80% to 100%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['80To100']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['80To100']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['80To100']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['80To100']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -197,8 +221,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>90% to 95%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['90To95']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['90To95']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['90To95']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['90To95']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -207,8 +235,12 @@ const Table = ({ data }) => {
             }}
           >
             <td>95% to 99%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['95To99']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['95To99']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['95To99']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['95To99']}
+            </NumericTableCell>
           </tr>
           <tr
             style={{
@@ -217,13 +249,21 @@ const Table = ({ data }) => {
             }}
           >
             <td>99% to 100%</td>
-            <NumericTableCell>{data['2030ConventionalDistribution']['99To100']}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution['99To100']}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution']['99To100']}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution['99To100']}
+            </NumericTableCell>
           </tr>
           <tr style={{ backgroundColor: 'transparent', fontWeight: 700 }}>
             <td>Total</td>
-            <NumericTableCell>{data['2030ConventionalDistribution'].total}</NumericTableCell>
-            <NumericTableCell>{data.longRunDynamicDistribution.total}</NumericTableCell>
+            <NumericTableCell>
+              {data['2031ConventionalDistribution'].total}
+            </NumericTableCell>
+            <NumericTableCell>
+              {data.longRunDynamicDistribution.total}
+            </NumericTableCell>
           </tr>
         </tbody>
       </StyledTable>

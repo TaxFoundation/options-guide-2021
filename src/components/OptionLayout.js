@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import HR from './HR';
@@ -27,11 +27,14 @@ const filterOutTotal = obj => {
 };
 
 const Option = ({ option }) => {
-  let graphData = filterOutTotal(option.data.conventionalRevenue).map((d, i) => {
+  const [subOption, setSubOption] = useState(option.data[0]);
+  let graphData = filterOutTotal(subOption.conventionalRevenue).map((d, i) => {
     return {
       year: d.year,
       conventional: d.value,
-      dynamic: filterOutTotal(option.data.dynamicRevenue).find(r => r.year === d.year).value,
+      dynamic: filterOutTotal(subOption.dynamicRevenue).find(
+        r => r.year === d.year,
+      ).value,
     };
   });
 
@@ -43,8 +46,20 @@ const Option = ({ option }) => {
       </h2>
       {/* TODO: sections with data */}
       <DataContainer>
+        <div>
+          {option.data.length > 1 &&
+            option.data.map(d => (
+              <button
+                onClick={() => {
+                  setSubOption(option.data.find(o => o.name === d.name));
+                }}
+              >
+                {d.name}
+              </button>
+            ))}
+        </div>
         <Graph data={graphData}></Graph>
-        <SummaryData data={option.data}></SummaryData>
+        <SummaryData data={subOption}></SummaryData>
       </DataContainer>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />

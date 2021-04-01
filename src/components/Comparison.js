@@ -77,16 +77,28 @@ const Comparison = ({ current, options, setOption }) => {
     <table>
       <thead>
         <tr>
-          <TH colors={sortArrows('id', sortBy, ascending)} onClick={() => handleSort('id')}>
+          <TH
+            colors={sortArrows('id', sortBy, ascending)}
+            onClick={() => handleSort('id')}
+          >
             <div>Tax Reform Option</div>
           </TH>
-          <TH colors={sortArrows('gdp', sortBy, ascending)} onClick={() => handleSort('gdp')}>
+          <TH
+            colors={sortArrows('gdp', sortBy, ascending)}
+            onClick={() => handleSort('gdp')}
+          >
             <div>Long-Run Change in GDP</div>
           </TH>
-          <TH colors={sortArrows('fte', sortBy, ascending)} onClick={() => handleSort('fte')}>
+          <TH
+            colors={sortArrows('fte', sortBy, ascending)}
+            onClick={() => handleSort('fte')}
+          >
             <div>Full-Time Equivalent Jobs</div>
           </TH>
-          <TH colors={sortArrows('static', sortBy, ascending)} onClick={() => handleSort('static')}>
+          <TH
+            colors={sortArrows('static', sortBy, ascending)}
+            onClick={() => handleSort('static')}
+          >
             <div>Static 10-Year Revenue (billions)</div>
           </TH>
           <TH
@@ -102,9 +114,13 @@ const Comparison = ({ current, options, setOption }) => {
           .sort((a, b) => {
             switch (sortBy) {
               case 'gdp':
-                return ascending ? a.longRunGDP - b.longRunGDP : b.longRunGDP - a.longRunGDP;
+                return ascending
+                  ? a.longRunGDP - b.longRunGDP
+                  : b.longRunGDP - a.longRunGDP;
               case 'fte':
-                return ascending ? a.fteJobs - b.fteJobs : b.fteJobs - a.fteJobs;
+                return ascending
+                  ? a.fteJobs - b.fteJobs
+                  : b.fteJobs - a.fteJobs;
               case 'static':
                 return ascending
                   ? a.static10YearRev - b.static10YearRev
@@ -117,25 +133,33 @@ const Comparison = ({ current, options, setOption }) => {
                 return ascending ? a.id - b.id : b.id - a.id;
             }
           })
-          .map(option => (
-            <tr key={`option-table-${option.id}`}>
+          .map((option, i) => (
+            <tr key={`option-table-${option.id}-${i}`}>
               <OptionLink
                 onClick={() => {
                   setOption(option.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-              >{`Option ${option.id}: ${option.title}`}</OptionLink>
-              <NumericTableCell>{`${option.longRunGDP * 100}%`}</NumericTableCell>
-              <NumericTableCell>{new Intl.NumberFormat().format(option.fteJobs)}</NumericTableCell>
+              >
+                {option.title}
+              </OptionLink>
+              <NumericTableCell>{`${
+                option.longRunGDP * 100
+              }%`}</NumericTableCell>
               <NumericTableCell>
-                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
-                  option.static10YearRev,
-                )}
+                {new Intl.NumberFormat().format(option.fteJobs)}
               </NumericTableCell>
               <NumericTableCell>
-                {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
-                  option.dynamic10YearRev,
-                )}
+                {new Intl.NumberFormat('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                }).format(option.static10YearRev)}
+              </NumericTableCell>
+              <NumericTableCell>
+                {new Intl.NumberFormat('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                }).format(option.dynamic10YearRev)}
               </NumericTableCell>
             </tr>
           ))}

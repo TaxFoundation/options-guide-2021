@@ -25,9 +25,23 @@ function App() {
   const [option, setOption] = useQueryParams('option', 'home');
   const [optionData, setOptionData] = useState(null);
 
+  const comparisonData = [];
+  options.forEach(option => {
+    option.data.forEach(data => {
+      comparisonData.push({
+        id: option.id,
+        title: `${option.title} - ${data.name}`,
+        longRunGDP: data.longRunEconomic.gdp,
+        fteJobs: data.longRunEconomic.fullTimeEquivalentJobs,
+        static10YearRev: data.conventionalRevenue.total,
+        dynamic10YearRev: data.dynamicRevenue.total,
+      });
+    });
+  });
+
   useEffect(() => {
     if (option !== 'home') {
-      setOptionData(options.find(opt => opt.id === option));
+      setOptionData(options.find(opt => +opt.id === +option));
     } else {
       setOptionData(null);
     }
@@ -36,23 +50,14 @@ function App() {
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
-      <Navigation option={option} options={options} setOption={setOption}></Navigation>
+      <Navigation option={option} options={options} setOption={setOption} />
       {option === 'home' && <Home />}
       {option !== 'home' && optionData && <OptionLayout option={optionData} />}
       <Comparison
         current={option}
-        options={options.map(opt => {
-          return {
-            id: opt.id,
-            title: opt.title,
-            longRunGDP: opt.data.longRunEconomic.gdp,
-            fteJobs: opt.data.longRunEconomic.fullTimeEquivalentJobs,
-            static10YearRev: opt.data.conventionalRevenue.total,
-            dynamic10YearRev: opt.data.dynamicRevenue.total,
-          };
-        })}
+        options={comparisonData}
         setOption={setOption}
-      ></Comparison>
+      />
     </div>
   );
 }
