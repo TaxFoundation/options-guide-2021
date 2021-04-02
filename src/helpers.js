@@ -33,8 +33,7 @@ const useQueryParams = (key, defaultVal) => {
     setQuery(newVal);
 
     const query = getQuery();
-
-    if (newVal.trim() !== '') {
+    if (String(newVal).trim() !== '') {
       query.set(key, newVal);
     } else {
       query.delete(key);
