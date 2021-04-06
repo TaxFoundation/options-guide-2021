@@ -66,6 +66,14 @@ const StyledTable = styled.table`
   }
 `;
 
+const percentToText = percent => {
+  if (percent <= 0.0005 && percent >= -0.0005) {
+    return percent >= 0 ? 'Less than +0.05%' : 'Less than -0.05%';
+  }
+  const sign = percent >= 0 ? '+' : '';
+  return `${sign}${percentFormat(percent)}`;
+};
+
 const Table = ({ data }) => {
   return (
     <Container>
@@ -92,25 +100,19 @@ const Table = ({ data }) => {
           <EffectsList>
             <li>
               <EffectStatistic>
-                {`${data.longRunEconomic.gdp >= 0 ? '+' : ''}${percentFormat(
-                  data.longRunEconomic.gdp,
-                )}`}
+                {percentToText(data.longRunEconomic.gdp)}
               </EffectStatistic>{' '}
               Gross Domestic Product
             </li>
             <li>
               <EffectStatistic>
-                {`${data.longRunEconomic.gnp >= 0 ? '+' : ''}${percentFormat(
-                  data.longRunEconomic.gnp,
-                )}`}
+                {percentToText(data.longRunEconomic.gnp)}
               </EffectStatistic>{' '}
               Gross National Product
             </li>
             <li>
               <EffectStatistic>
-                {`${
-                  data.longRunEconomic.capitalStock >= 0 ? '+' : ''
-                }${percentFormat(data.longRunEconomic.capitalStock)}`}
+                {percentToText(data.longRunEconomic.capitalStock)}
               </EffectStatistic>{' '}
               Capital Stock
             </li>
@@ -127,9 +129,7 @@ const Table = ({ data }) => {
             </li>
             <li>
               <EffectStatistic>
-                {`${
-                  data.longRunEconomic.wageRate >= 0 ? '+' : ''
-                }${percentFormat(data.longRunEconomic.wageRate)}`}
+                {percentToText(data.longRunEconomic.wageRate)}
               </EffectStatistic>{' '}
               Wage Rate
             </li>
