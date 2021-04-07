@@ -30,7 +30,10 @@ function App() {
     option.data.forEach(data => {
       comparisonData.push({
         id: option.id,
-        title: `${option.title} - ${data.name}`,
+        title:
+          option.data.length === 1
+            ? `${option.id}: ${option.title}`
+            : `${option.id}: ${option.title} - ${data.name}`,
         longRunGDP: data.longRunEconomic.gdp,
         fteJobs: data.longRunEconomic.fullTimeEquivalentJobs,
         static10YearRev: data.conventionalRevenue.total,
