@@ -33,14 +33,17 @@ const filterOutTotal = obj => {
 };
 
 const generateGraphData = data => {
-  return filterOutTotal(data.conventionalRevenue).map((d, i) => {
-    return {
-      year: d.year,
-      conventional: d.value,
-      dynamic: filterOutTotal(data.dynamicRevenue).find(r => r.year === d.year)
-        .value,
-    };
-  });
+  return filterOutTotal(data.conventionalRevenue)
+    .sort((a, b) => a.year - b.year)
+    .map((d, i) => {
+      return {
+        year: d.year,
+        conventional: d.value,
+        dynamic: filterOutTotal(data.dynamicRevenue).find(
+          r => r.year === d.year,
+        ).value,
+      };
+    });
 };
 
 const Option = ({ option }) => {

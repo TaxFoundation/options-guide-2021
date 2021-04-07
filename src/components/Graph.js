@@ -21,7 +21,7 @@ const LegendContainer = styled.div`
 `;
 
 const Graph = ({ data }) => {
-  const years = [...data.map(d => d.year)].sort((a, b) => a - b);
+  const years = [...data.map(d => d.year)];
   const values = [
     ...data.map(d => d.conventional),
     ...data.map(d => d.dynamic),
