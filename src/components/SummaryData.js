@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
-import { dollarFormat, percentFormat, wholeNumberFormat } from '../helpers';
+import {
+  dollarFormat,
+  percentFormat,
+  percentToText,
+  wholeNumberFormat,
+} from '../helpers';
 
 const Container = styled.div`
   display: grid;
@@ -66,14 +71,6 @@ const StyledTable = styled.table`
   }
 `;
 
-const percentToText = percent => {
-  if (percent <= 0.0005 && percent >= -0.0005) {
-    return percent >= 0 ? 'Less than +0.05%' : 'Less than -0.05%';
-  }
-  const sign = percent >= 0 ? '+' : '';
-  return `${sign}${percentFormat(percent)}`;
-};
-
 const Table = ({ data }) => {
   return (
     <Container>
@@ -123,7 +120,11 @@ const Table = ({ data }) => {
                     data.longRunEconomic.fullTimeEquivalentJobs > 0 ? '+' : ''
                   }${wholeNumberFormat(
                   data.longRunEconomic.fullTimeEquivalentJobs / 1000,
-                )}k`}
+                )}${
+                  Math.round(data.longRunEconomic.fullTimeEquivalentJobs) === 0
+                    ? ''
+                    : 'k'
+                }`}
               </EffectStatistic>{' '}
               Full-Time Equivalent Jobs
             </li>

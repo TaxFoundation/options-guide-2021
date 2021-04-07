@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
 const wholeNumberFormat = number =>
-  new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(number);
+  Math.round(number) === 0
+    ? 0
+    : new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(
+        number,
+      );
 
 const dollarFormat = number =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
@@ -15,6 +19,14 @@ const percentFormat = number => {
     maximumFractionDigits: precision,
   });
   return formatter.format(number);
+};
+
+const percentToText = percent => {
+  if (percent <= 0.0005 && percent >= -0.0005) {
+    return percent >= 0 ? 'Less than +0.05%' : 'Less than -0.05%';
+  }
+  const sign = percent >= 0 ? '+' : '';
+  return `${sign}${percentFormat(percent)}`;
 };
 
 const getQuery = () => {
@@ -50,4 +62,10 @@ const useQueryParams = (key, defaultVal) => {
   return [query, updateUrl];
 };
 
-export { wholeNumberFormat, dollarFormat, percentFormat, useQueryParams };
+export {
+  wholeNumberFormat,
+  dollarFormat,
+  percentFormat,
+  percentToText,
+  useQueryParams,
+};

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
-import { wholeNumberFormat, percentFormat, dollarFormat } from '../helpers';
+import { wholeNumberFormat, percentToText, dollarFormat } from '../helpers';
 
 const TH = styled.th`
   background-color: white !important;
@@ -145,7 +145,7 @@ const Comparison = ({ current, options, setOption }) => {
                 {option.title}
               </OptionLink>
               <NumericTableCell>
-                {percentFormat(option.longRunGDP)}
+                {percentToText(option.longRunGDP)}
               </NumericTableCell>
               <NumericTableCell>
                 {wholeNumberFormat(option.fteJobs)}
