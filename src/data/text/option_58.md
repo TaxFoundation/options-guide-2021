@@ -1,10 +1,14 @@
 ---
-id: 53
-title: Make Child Tax Credit Fully Refundable
+id: 58
+title: Make Charitable Deduction "Above-the-Line"
 category: 3
 data:
-  - file: option_53_ctc_refund_full.csv
-    name: Make Child Tax Credit Fully Refundable
+  - file: option_58_chari_ded.csv
+    name: Make Charitable Deduction "Above-the-Line"
+  - file: option_1_15_percent.csv
+    name: Lower 15%
+  - file: option_1_20_percent.csv
+    name: Lower 20%
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

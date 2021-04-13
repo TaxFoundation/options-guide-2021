@@ -1,10 +1,10 @@
 ---
 id: 52
-title: Increase Alcohol Excise Taxes to $16 per proof gallon
-category: growth
+title: Reform the EITC for Married and Unmarried Workers, with and without Children
+category: 3
 data:
-  - file: option_52_alcohol.csv
-    name: Increase Alcohol Excise Taxes to $16 per proof gallon
+  - file: option_52_eitc_marriage.csv
+    name: Reform the EITC for Married and Unmarried Workers, with and without Children
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

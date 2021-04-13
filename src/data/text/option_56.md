@@ -1,10 +1,10 @@
 ---
-id: 53
-title: Make Child Tax Credit Fully Refundable
+id: 56
+title: Increase the Standard Deduction by 25% for All Filing Groups
 category: 3
 data:
-  - file: option_53_ctc_refund_full.csv
-    name: Make Child Tax Credit Fully Refundable
+  - file: option_56_increaseSD.csv
+    name: Increase the Standard Deduction by 25% for All Filing Groups
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
