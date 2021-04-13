@@ -1,10 +1,10 @@
 ---
 id: 42
-title: Eliminate the Section 199A Deduction
-category: growth
+title: Eliminate 1031 Like-Kind Exchanges
+category: 2
 data:
-  - file: option_42_eliminate199a.csv
-    name: Eliminate the Section 199A Deduction
+  - file: option_42_like_kind_exchange_repeal.csv
+    name: Eliminate 1031 Like-Kind Exchanges
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

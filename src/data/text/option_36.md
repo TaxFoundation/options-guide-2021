@@ -1,10 +1,16 @@
 ---
-id: 23
-title: Eliminate the Home Mortgage Interest Deduction
+id: 36
+title: Raise the Corporate Tax Rate to 28 Percent
 category: 2
 data:
-  - file: option_23_eliminateHMID.csv
-    name: Eliminate the Home Mortgage Interest Deduction
+  - file: option_36_25cit.csv
+    name: 25% CIT
+  - file: option_36_28cit.csv
+    name: 28% CIT
+  - file: option_36_30cit.csv
+    name: 30% CIT
+  - file: option_36_35cit.csv
+    name: 35% CIT
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

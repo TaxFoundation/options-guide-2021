@@ -1,12 +1,10 @@
 ---
 id: 14
-title: Lower the Corporate Tax Rate
-category: growth
+title: Raise Individual Income Tax Rates by 10 Percent
+category: 2
 data:
-  - file: option_14_15cit.csv
-    name: 15% Corporate Income Tax
-  - file: option_14_20cit.csv
-    name: 20% Corporate Income Tax
+  - file: option_14_raise_10.csv
+    name: Raise Individual Income Tax Rates by 10 Percent
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

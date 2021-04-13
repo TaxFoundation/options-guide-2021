@@ -1,10 +1,10 @@
 ---
 id: 35
-title: Eliminate the Exclusion of Capital Gains on Principle Residences
-category: growth
+title: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
+category: 2
 data:
-  - file: option_35_housing_exclusion_repeal.csv
-    name: Eliminate the Exclusion of Capital Gains on Principle Residences
+  - file: option_35_payroll_over_$400K.csv
+    name: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

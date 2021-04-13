@@ -1,10 +1,10 @@
 ---
-id: 23
-title: Eliminate the Home Mortgage Interest Deduction
+id: 17
+title: Add a New Bracket of 45 Percent for Income Above $750,000
 category: 2
 data:
-  - file: option_23_eliminateHMID.csv
-    name: Eliminate the Home Mortgage Interest Deduction
+  - file: option_17_45_rate.csv
+    name: Add a New Bracket of 45 Percent for Income Above $750,000
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

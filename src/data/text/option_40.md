@@ -1,16 +1,10 @@
 ---
 id: 40
-title: Raise the Corporate Tax Rate
-category: growth
+title: Return to Alternative Depreciation Schedule (ADS)
+category: 2
 data:
-  - file: option_40_25cit.csv
-    name: 25% Corporate Income Tax
-  - file: option_40_28cit.csv
-    name: 28% Corporate Income Tax
-  - file: option_40_30cit.csv
-    name: 30% Corporate Income Tax
-  - file: option_40_35cit.csv
-    name: 35% Corporate Income Tax
+  - file: option_40_ADS.csv
+    name: Return to Alternative Depreciation Schedule (ADS)
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

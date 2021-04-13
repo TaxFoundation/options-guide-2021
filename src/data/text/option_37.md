@@ -1,14 +1,10 @@
 ---
 id: 37
-title: Increase the Social Security Payroll Tax
-category: growth
+title: Institute a Corporate Surtax of 5 Percent
+category: 2
 data:
-  - file: option_37_split1ppincrease.csv
-    name: 1 Percentage Point Split
-  - file: option_37_split2ppincrease.csv
-    name: 2 Percentage Point Split
-  - file: option_37_split3ppincrease.csv
-    name: 3 Percentage Point Split
+  - file: option_37_corp_surtax.csv
+    name: Institute a Corporate Surtax of 5 Percent
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

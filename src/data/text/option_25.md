@@ -1,10 +1,10 @@
 ---
-id: 23
-title: Eliminate the Home Mortgage Interest Deduction
+id: 25
+title: Eliminate the Charitable Deduction
 category: 2
 data:
-  - file: option_23_eliminateHMID.csv
-    name: Eliminate the Home Mortgage Interest Deduction
+  - file: option_25_charitable.csv
+    name: Eliminate the Charitable Deduction
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

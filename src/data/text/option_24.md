@@ -1,10 +1,10 @@
 ---
 id: 24
-title: Reduce the Child Tax Credit to $500
-category: growth
+title: Lower the Home Mortgage Interest Deduction Cap to $500,000 Principal Value
+category: 2
 data:
-  - file: option_24_500ctc.csv
-    name: Reduce the Child Tax Credit to $500
+  - file: option_24_hmid_500k.csv
+    name: Lower the Home Mortgage Interest Deduction Cap to $500,000 Principal Value
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

@@ -1,10 +1,10 @@
 ---
 id: 34
-title: Tax Capital Gains at 39.6% Above $1 Million
-category: growth
+title: Eliminate the Social Security Payroll Tax Cap
+category: 2
 data:
-  - file: option_34_cap_gains_1M_39.6.csv
-    name: Capital Gains Over $1m Taxed at 39.6%
+  - file: option_34_payroll_uncap.6.csv
+    name: Eliminate the Social Security Payroll Tax Cap
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
