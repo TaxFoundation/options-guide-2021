@@ -105,7 +105,9 @@ const Graph = ({ data }) => {
                         width={typeScale.bandwidth()}
                         fill={colorScale(k)}
                         height={
-                          min >= 0 ? yScale(min) - yScale(y[k]) : yScale(y[k])
+                          y[k] >= 0
+                            ? yScale(0) - yScale(y[k])
+                            : yScale(y[k]) - yScale(0)
                         }
                         x={typeScale(k)}
                         y={Math.min(yScale(y[k]), yScale(0))}
