@@ -49,9 +49,14 @@ const TH = styled.th`
   }
 `;
 
+const TD = styled(NumericTableCell)`
+  font-size: 0.8rem;
+`;
+
 const OptionLink = styled.td`
   color: var(--tf-blue);
   cursor: pointer;
+  font-size: 0.8rem;
 `;
 
 const Comparison = ({ current, options, setOption }) => {
@@ -144,18 +149,10 @@ const Comparison = ({ current, options, setOption }) => {
               >
                 {option.title}
               </OptionLink>
-              <NumericTableCell>
-                {percentToText(option.longRunGDP)}
-              </NumericTableCell>
-              <NumericTableCell>
-                {wholeNumberFormat(option.fteJobs)}
-              </NumericTableCell>
-              <NumericTableCell>
-                {dollarFormat(option.static10YearRev)}
-              </NumericTableCell>
-              <NumericTableCell>
-                {dollarFormat(option.dynamic10YearRev)}
-              </NumericTableCell>
+              <TD>{percentToText(option.longRunGDP)}</TD>
+              <TD>{wholeNumberFormat(option.fteJobs)}</TD>
+              <TD>{dollarFormat(option.static10YearRev)}</TD>
+              <TD>{dollarFormat(option.dynamic10YearRev)}</TD>
             </tr>
           ))}
       </tbody>

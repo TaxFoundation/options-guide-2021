@@ -27,18 +27,16 @@ function App() {
 
   const comparisonData = [];
   options.forEach(option => {
-    option.data.forEach(data => {
-      comparisonData.push({
-        id: option.id,
-        title:
-          option.data.length === 1
-            ? `${option.id}: ${option.title}`
-            : `${option.id}: ${option.title} - ${data.name}`,
-        longRunGDP: data.longRunEconomic.gdp,
-        fteJobs: data.longRunEconomic.fullTimeEquivalentJobs,
-        static10YearRev: data.conventionalRevenue.total,
-        dynamic10YearRev: data.dynamicRevenue.total,
-      });
+    comparisonData.push({
+      id: option.id,
+      title:
+        option.data.length === 1
+          ? `${option.id}: ${option.title}`
+          : `${option.id}: ${option.title} (${option.data[0].name})`,
+      longRunGDP: option.data[0].longRunEconomic.gdp,
+      fteJobs: option.data[0].longRunEconomic.fullTimeEquivalentJobs,
+      static10YearRev: option.data[0].conventionalRevenue.total,
+      dynamic10YearRev: option.data[0].dynamicRevenue.total,
     });
   });
 
