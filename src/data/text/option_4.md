@@ -11,6 +11,8 @@ data:
     name: 3 Percentage Point Split
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+The employee-side and employer-side payroll tax would decrease by 1 percentage point, split between the two sides, making each drop from 6.2 percent to 5.7 percent for a combined Social Security payroll tax rate of 11.4 percent. The payroll tax applies to the first $142,800 of wages and is indexed to wage growth.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+The economic incidence of both sides of the payroll tax is fully borne by workers in the form of lower wages over the long run. Because labor is less responsive to taxation than capital, the payroll tax is a relatively efficient tax.
+
+Reducing both sides of the payroll tax would increase the return to labor. It would lead to an immediate increase in after-tax income for taxpayers as the wedge between the total amount employers pay their workers and what the workers receive as pretax taxable income shrinks.

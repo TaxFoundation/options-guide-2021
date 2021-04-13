@@ -11,6 +11,6 @@ data:
     name: 35% Top Rate
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+This option would reduce the top marginal individual income tax rate to 35 percent. The top rate is currently 37 percent, through 2025; beginning in 2026 it is scheduled to increase to 39.6 percent.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+Reducing the top rate would increase the incentive for individuals in the top bracket to work, save, and invest, including through ownership of pass-through businesses. The response to the greater incentives would increase long-run GDP by 0.2 percent and reduce the revenue cost of the policy from $417 billion to $315 billion over 10 years. The boost in after-tax income would be concentrated among earners in the top quintile, particularly on a conventional basis, but on a dynamic basis, after-tax incomes would increase for all taxpayers.

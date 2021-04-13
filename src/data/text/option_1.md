@@ -11,6 +11,8 @@ data:
     name: Lower 20%
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+This option would reduce all seven income tax rates by 10 percent, resulting in a new top rate of 33.3 percent in years 2022 through 2025 and 35.6 percent in 2026 through 2031. The bottom rate would be 9 percent. Rates in between would also be reduced by 10 percent.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+Reducing individual income tax rates would increase long-run GDP by 0.9 percent by increasing the incentives for individuals to work, save, and invest, including through ownership of pass-through businesses, such as sole proprietorships, partnerships, and S corporations. The larger economy would offset some of the revenue loss from the broad tax cuts, but even so, the policy would still reduce federal revenues by almost $1.7 trillion.
+
+Higher-income taxpayers receive the largest increase in after-tax income because the individual income tax is progressive and high-income taxpayers benefit from the lower tax rates all the way up the income tax brackets. On a dynamic basis, after-tax incomes would increase for all taxpayers.
