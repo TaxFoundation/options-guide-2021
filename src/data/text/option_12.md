@@ -3,7 +3,7 @@ id: 12
 title: Lower the Estate Tax Rate to 30 Percent
 category: 1
 data:
-  - file: option_12_estate_30pct.csv.csv
+  - file: option_12_estate_30pct.csv
     name: Lower the Estate Tax Rate to 30 Percent
 ---
 

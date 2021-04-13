@@ -3,7 +3,7 @@ id: 39
 title: Require Amortization of Advertising Expenses over 10 Years
 category: 2
 data:
-  - file: option_39_advertising_amort$400K.csv
+  - file: option_39_advertising_amort.csv
     name: Require Amortization of Advertising Expenses over 10 Years
 ---
 

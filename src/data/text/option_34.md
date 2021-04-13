@@ -3,7 +3,7 @@ id: 34
 title: Eliminate the Social Security Payroll Tax Cap
 category: 2
 data:
-  - file: option_34_payroll_uncap.6.csv
+  - file: option_34_payroll_uncap.csv
     name: Eliminate the Social Security Payroll Tax Cap
 ---
 
