@@ -1,10 +1,10 @@
 ---
 id: 13
-title: Make Section 199A Deduction Permanent
-category: growth
+title: Repeal Tariffs Imposed Under Sections 232, 201, and 301
+category: 1
 data:
-  - file: option_13_199aperm.csv
-    name: Make Section 199A Deduction Permanent
+  - file: option_13_tariffs.csv
+    name: Repeal Tariffs Imposed Under Sections 232, 201, and 301
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

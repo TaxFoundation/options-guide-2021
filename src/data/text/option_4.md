@@ -1,10 +1,14 @@
 ---
-id: 6
-title: Index Capital Gains to Inflation
+id: 4
+title: Reduce Employer- and Employee-Side Payroll Tax by 1pp Split
 category: 1
 data:
-  - file: option_6_capgains_inflation.csv
-    name: Index Capital Gains to Inflation
+  - file: option_4_split1ppcut.csv
+    name: 1pp Split
+  - file: option_4_split2ppcut.csv
+    name: 2pp Split
+  - file: option_4_split3ppcut.csv
+    name: 3pp Split
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

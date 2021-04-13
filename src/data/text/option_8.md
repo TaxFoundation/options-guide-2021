@@ -1,10 +1,10 @@
 ---
-id: 6
-title: Index Capital Gains to Inflation
+id: 8
+title: Implement Neutral Cost Recovery for Structures
 category: 1
 data:
-  - file: option_6_capgains_inflation.csv
-    name: Index Capital Gains to Inflation
+  - file: option_8_NCRS.csv
+    name: Lower 15%
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

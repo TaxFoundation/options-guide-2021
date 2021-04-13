@@ -1,7 +1,7 @@
 ---
 id: 1
 title: Lower Individual Income Tax Rates Across the Board
-category: growth
+category: 1
 data:
   - file: option_1_10_percent.csv
     name: Lower 10%

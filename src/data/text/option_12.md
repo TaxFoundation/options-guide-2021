@@ -1,10 +1,10 @@
 ---
 id: 12
-title: Cancel R&D Amortization
-category: growth
+title: Lower the Estate Tax Rate to 30 Percent
+category: 1
 data:
-  - file: option_12_rnd.csv
-    name: Cancel R&D Amortization
+  - file: option_12_estate_30pct.csv.csv
+    name: Lower the Estate Tax Rate to 30 Percent
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

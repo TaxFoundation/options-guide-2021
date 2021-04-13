@@ -1,7 +1,7 @@
 ---
 id: 2
 title: Lower the Top Marginal Income Tax Rate
-category: growth
+category: 1
 data:
   - file: option_2_25_toprate.csv
     name: 25% Top Rate
