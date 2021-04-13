@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import Button from './Button';
 import HR from './HR';
 import Graph from './Graph';
-import SummaryData from './SummaryData';
+import { Effects } from './Effects';
+import BudgetaryEffects from './BudgetaryEffects';
+import EconomicEffects from './EconomicEffects';
+import DistributionTable from './DistributionTable';
 
 const OptionNumber = styled.span`
   color: var(--tf-blue);
@@ -59,6 +62,7 @@ const Option = ({ option }) => {
         <OptionNumber>Option {option.id}</OptionNumber>
         {option.title}
       </h2>
+      <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <DataContainer>
         <SubOptionButtonsContainer>
           {option.data.length > 1 &&
@@ -75,12 +79,24 @@ const Option = ({ option }) => {
         </SubOptionButtonsContainer>
         {option.data[subOption] && (
           <>
+            <Effects>
+              <BudgetaryEffects
+                conventional={option.data[subOption].conventionalRevenue.total}
+                dynamic={option.data[subOption].dynamicRevenue.total}
+              />
+              <EconomicEffects
+                econEffects={option.data[subOption].longRunEconomic}
+              />
+            </Effects>
             <Graph data={generateGraphData(option.data[subOption])}></Graph>
-            <SummaryData data={option.data[subOption]}></SummaryData>
+            <DistributionTable
+              nextYear={option.data[subOption]['2022ConventionalDistribution']}
+              finalYear={option.data[subOption]['2031ConventionalDistribution']}
+              distribution={option.data[subOption].longRunDynamicDistribution}
+            />
           </>
         )}
       </DataContainer>
-      <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
       <HR />
     </div>
   );

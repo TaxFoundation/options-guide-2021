@@ -49,7 +49,7 @@ const Graph = ({ data }) => {
     }).format(number);
 
   const yScale = scaleLinear({
-    domain: [max + spread * 0.05, min - spread * 0.05],
+    domain: [max + spread * 0.05, min === 0 ? min : min - spread * 0.05],
     range: [0, height - margin.top - margin.bottom],
     // nice: true,
   });
