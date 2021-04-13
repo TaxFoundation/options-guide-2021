@@ -1,10 +1,10 @@
 ---
 id: 29
-title: Raise the Top Capital Gains and Dividend Tax Rate to 30 percent
+title: Raise the Top Capital Gains and Dividend Tax Rate to 30%
 category: 2
 data:
   - file: option_29_cap_gains_30_percent.csv
-    name: Raise the Top Capital Gains and Dividend Tax Rate to 30 percent
+    name: Raise the Top Capital Gains and Dividend Tax Rate to 30%
 ---
 
 Under the current U.S. tax code, long-term capital gains and qualified dividends are taxed at a top rate of 20 percent (in addition to the 3.8 percent Net Investment Income Tax). Lower rates on long-term capital gains and qualified dividends offset some of the double taxation of corporate income and savings.

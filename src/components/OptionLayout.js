@@ -63,6 +63,7 @@ const Option = ({ option }) => {
         {option.title}
       </h2>
       <div dangerouslySetInnerHTML={{ __html: option.text }}></div>
+      <HR />
       <DataContainer>
         <SubOptionButtonsContainer>
           {option.data.length > 1 &&
