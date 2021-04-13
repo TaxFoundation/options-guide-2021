@@ -28,14 +28,15 @@ const Graph = ({ data }) => {
   ];
   const min = Math.min(...values, 0);
   const max = Math.max(...values, 0);
+  const spread = Math.abs(max - min);
 
   const width = 600;
   const height = 400;
   const margin = {
-    bottom: min < 0 ? 20 : 40,
+    bottom: 40,
     left: 70,
     right: 20,
-    top: min < 0 ? 60 : 20,
+    top: 30,
   };
 
   const title = 'Change in Government Revenue Over 10 Years (Billions)';
@@ -48,7 +49,7 @@ const Graph = ({ data }) => {
     }).format(number);
 
   const yScale = scaleLinear({
-    domain: [max, min],
+    domain: [max + spread * 0.05, min - spread * 0.05],
     range: [0, height - margin.top - margin.bottom],
     // nice: true,
   });
@@ -85,6 +86,13 @@ const Graph = ({ data }) => {
         >
           {title}
         </Text>
+        <line
+          x1={margin.left}
+          x2={width - margin.right}
+          y1={yScale(0) + margin.top}
+          y2={yScale(0) + margin.top}
+          stroke="rgb(85,85,85)"
+        ></line>
         <Group>
           {data.map(y => {
             return (
@@ -144,17 +152,16 @@ const Graph = ({ data }) => {
         ></AxisLeft>
         <Axis
           label="Year"
-          labelOffset={5}
+          labelOffset={18}
           labelProps={{
             style: {
               fill: 'rgb(85, 85, 85)',
               fontSize: '0.85rem',
             },
             textAnchor: 'middle',
-            transform: `translate(0,${min < 0 ? -7 : 7})`,
           }}
           left={margin.left}
-          orientation={max === 0 ? 'top' : 'bottom'}
+          orientation="bottom"
           scale={yearScale}
           tickLabelProps={() => {
             return {
@@ -163,10 +170,10 @@ const Graph = ({ data }) => {
                 fontSize: '0.7rem',
                 textAnchor: 'middle',
               },
-              dy: min <= 0 ? -3 : 3,
+              dy: 3,
             };
           }}
-          top={yScale(0) + margin.top}
+          top={height - margin.bottom}
           tickFormat={v => v}
         ></Axis>
       </ScaleSVG>
