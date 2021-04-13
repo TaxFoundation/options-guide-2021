@@ -1,10 +1,10 @@
 ---
 id: 64
-title: Make the 2017 Tax Law Standard Deduction, Personal Exemption, and Child Tax Credit Permanent
-category: growth
+title: Eliminate the Net Investment Income Tax
+category: 4
 data:
-  - file: option_64_TCJAswap.csv
-    name: Make the 2017 Tax Law Standard Deduction, Personal Exemption, and Child Tax Credit Permanent
+  - file: option_64_NIIT.csv
+    name: Eliminate the Net Investment Income Tax
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

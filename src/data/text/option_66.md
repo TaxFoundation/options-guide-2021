@@ -1,9 +1,9 @@
 ---
 id: 66
-title: Eliminate the Individual Alternative Minimum Tax
-category: growth
+title: Maintain Limitation on Interest Deductibility at 30 Percent of EBITDA
+category: 4
 data:
-  - file: option_66_eliminateAMT.csv
+  - file: option_66_EBIT.csv
     name: Eliminate the Individual Alternative Minimum Tax
 ---
 

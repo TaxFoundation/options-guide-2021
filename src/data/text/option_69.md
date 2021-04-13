@@ -1,10 +1,10 @@
 ---
-id: 67
-title: Eliminate Various Business Expenditures
+id: 69
+title: Eliminate the Estate Tax
 category: 4
 data:
-  - file: option_67_eliminate_expenditures.csv
-    name: Eliminate Various Business Expenditures
+  - file: option_69_estate_kill.csv
+    name: Eliminate the Estate Tax
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

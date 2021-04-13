@@ -1,10 +1,10 @@
 ---
 id: 62
-title: Increase the Standard Deduction by 25% for All Filing Groups
-category: growth
+title: Make the 2017 Tax Law Standard Deduction, Personal Exemption, and CTC Permanent
+category: 4
 data:
-  - file: option_62_increaseSD.csv
-    name: Increase the Standard Deduction by 25% for All Filing Groups
+  - file: option_62_TCJAswap.csv
+    name: Make the 2017 Tax Law Standard Deduction, Personal Exemption, and CTC Permanent
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

@@ -1,10 +1,12 @@
 ---
-id: 67
-title: Eliminate Various Business Expenditures
+id: 59
+title: Move to a Flat Rate
 category: 4
 data:
-  - file: option_67_eliminate_expenditures.csv
-    name: Eliminate Various Business Expenditures
+  - file: option_59_flat_20.csv
+    name: 20% Flat Tax
+  - file: option_59_flat_30.csv
+    name: 30% Flat Tax
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.

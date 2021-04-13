@@ -1,10 +1,10 @@
 ---
-id: 67
-title: Eliminate Various Business Expenditures
+id: 70
+title: Increase Alcohol Excise Taxes to $16 per proof gallon
 category: 4
 data:
-  - file: option_67_eliminate_expenditures.csv
-    name: Eliminate Various Business Expenditures
+  - file: option_70_alcohol.csv
+    name: Increase Alcohol Excise Taxes to $16 per proof gallon
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
