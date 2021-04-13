@@ -7,6 +7,8 @@ data:
     name: Add a Flat 5 Percent Tax on Individual Income
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+This option would introduce an additional individual income tax of 5 percent, which would apply to all taxable income.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+As the tax would apply to a broad base of income, including income that has already been taxed, it would generate nearly $6.5 trillion in revenue on a conventional basis, but have an outsized negative impact on long-term GDP. After accounting for the 2.1 percent reduction in economic output, the option would raise $5 trillion over the budget window.
+
+On a conventional basis, the bottom quintile would only see a small decrease in after-tax income because the tax would be largely offset by tax credits. All income quintiles would experience declines in their income on a dynamic basis, due to the broad base of the tax.

@@ -7,6 +7,6 @@ data:
     name: Reduce the Estate Tax Exemption to $2 million
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+Under current law, the unified estate and gift tax has exemptions of $11.7 million (indexed for inflation) for individuals and $23.4 million for couples, resulting in about 5,000 estates subject to tax each year.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+This option would decrease the exemption to $2 million for individuals ($4 million for joint filers), which was the exempt amount from 2006 to 2008. It would increase federal revenue by $337 billion over the 10-year budget window, on a conventional basis. It would slightly shrink economic output (GDP) and national income (GNP) after considering the marginal effect of subjecting more estates to the tax on investment and saving. After-tax incomes would drop primarily for the top 1 percent.

@@ -7,6 +7,8 @@ data:
     name: Add a New Bracket of 45 Percent for Income Above $750,000
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+This option would add a new 45% tax bracket for income above $750,000. On a conventional basis, this change would increase federal revenue over a 10-year period by $576 billion.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+A new, higher bracket would make the tax code more progressive, but would discourage labor supply among high-income individuals and increase the cost of capital for businesses that pay the individual income tax. This would reduce long-run GDP by 0.2 percent and cost 166,000 full-time equivalent jobs. After considering the effects on the economy, this change would increase federal revenue by $441 billion over a 10-year period.
+
+On a conventional basis, this option reduces the after-tax incomes of the top quintile by 0.8 percent in 2022. On a dynamic basis, after-tax incomes would drop by a small amount for all quintiles.

@@ -7,6 +7,8 @@ data:
     name: Raise Individual Income Tax Rates by 10 Percent
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+Under this option, all seven individual income tax rates would increase by 10 percent. Under the current baseline, the top marginal rate would rise from 37 percent to 40.7 percent through 2025, and from 39.6 percent to 43.7 percent when the 2017 tax reform expires after 2025.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+On a conventional basis, this change would increase federal revenue over a 10-year period by $2.1 trillion. It would reduce the supply of labor and increase the cost of capital for businesses that pay the individual income tax, leading to a 0.9 percent decrease in long-run GDP and 961,000 fewer full-time equivalent jobs. After considering the economic effects, it would increase federal revenue by $1.5 trillion over a 10-year period.
+
+On a conventional basis, the tax increase would primarily affect the top four quintiles because many lower-income households use the standard deduction to reduce their taxable income to zero. On a dynamic basis, after-tax income would drop for every group.

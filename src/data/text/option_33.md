@@ -11,6 +11,6 @@ data:
     name: 3 Percentage Point Split
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+This option would increase both the employee and employer Social Security payroll tax from 6.2 percent to 6.7 percent, yielding a combined Social Security payroll tax rate of 13.4 percent on the first $142,800 of wages and indexed to wage growth.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+Though employers are legally responsible for paying their portion of the payroll tax, the long-term burden of both sides of the payroll tax falls on employees in the form of lower wages. As such, this option would reduce the incentive to work, thereby reducing economic output and after-tax incomes. Compared to other tax types, the payroll tax is relatively efficient in that the entire burden falls on labor, which is less responsive to taxation than capital.
