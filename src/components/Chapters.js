@@ -18,22 +18,28 @@ const ChapterSelect = styled.button`
   font-weight: ${props => (props.active ? 700 : 400)};
   margin-bottom: -1px;
   padding: 0.5rem 0;
+  position: relative;
   text-transform: uppercase;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+
+  &::after {
+    background-color: ${props => props.color};
+    bottom: 0;
+    content: '';
+    height: ${props => (props.active ? '3px' : 0)};
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 
   &:hover {
     background: none;
     border: none;
     color: #333;
+    font-weight: 700;
 
     &::after {
-      bottom: 0;
-      content: '';
-      color: ${props => props.color};
       height: 3px;
-      left: 0;
-      position: absolute;
-      right: 0;
     }
   }
 `;
