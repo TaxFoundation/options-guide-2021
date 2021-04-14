@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import OptionLayout from './components/OptionLayout';
 import Comparison from './components/Comparison';
+import Contact from './components/Contact';
 
 import options from './data/cleaned/data.json';
 
@@ -20,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: Lato, sans-serif;
   }
 `;
+
+const downloadUrl = 'https://files.taxfoundation.org/something.pdf';
 
 function App() {
   const [option, setOption] = useQueryParams('option', 'home');
@@ -59,6 +62,7 @@ function App() {
         options={comparisonData}
         setOption={setOption}
       />
+      <Contact downloadUrl={downloadUrl} />
     </div>
   );
 }

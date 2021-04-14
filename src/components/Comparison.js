@@ -96,6 +96,7 @@ const Comparison = ({ current, options, setOption }) => {
 
   return (
     <Container id="comparison">
+      <h2 style={{ textAlign: 'center' }}>Options Comparison Table</h2>
       <table>
         <thead>
           <tr>
