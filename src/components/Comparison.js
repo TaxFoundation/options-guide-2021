@@ -22,6 +22,7 @@ const Container = styled.div`
 const Table = styled.table`
   border: 1px solid #ccc;
   border-collapse: collapse;
+  position: relative;
 
   th,
   td {
@@ -31,9 +32,14 @@ const Table = styled.table`
 `;
 
 const TH = styled.th`
-  background-color: white !important;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 1px 0 0 #ccc;
   cursor: pointer;
+  font-size: 0.9rem;
   font-weight: 700;
+  position: sticky;
+  top: 0;
   text-align: center;
   transition: 0.2s ease-in-out background-color;
 
