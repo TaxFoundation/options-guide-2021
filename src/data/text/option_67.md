@@ -1,12 +1,12 @@
 ---
 id: 67
-title: Eliminate Various Business Expenditures
+title: Eliminate Various Business Tax Expenditures
 category: 4
 data:
   - file: option_67_eliminate_expenditures.csv
-    name: Eliminate Various Business Expenditures
+    name: Eliminate Various Business Tax Expenditures
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+Tax expenditures are provisions that deviate from a “normal income tax structure” and generally favor a specific industry or activity. This option would broaden the tax base by repealing most business tax expenditures, but it would retain expenditures related to deferral, cost recovery, and foreign income.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+The economic impact of repeal is limited by two factors: some expenditures incentivize switching from one activity to another, rather than increasing the overall level of activity, and some are temporary, so bringing forward their scheduled expiration does not deviate from long-term law. Some expenditures, though, do have effects on long-term marginal tax rates, and so eliminating them would increase marginal tax rates on corporate and noncorporate businesses.

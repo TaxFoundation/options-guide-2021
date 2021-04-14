@@ -1,12 +1,12 @@
 ---
 id: 61
-title: Permanently Eliminate the Pease Limitation
+title: Permanently Eliminate the Pease Limitation on Itemized Deductions
 category: 4
 data:
   - file: option_61_pease.csv
-    name: Permanently Eliminate the Pease Limitation
+    name: Permanently Eliminate the Pease Limitation on Itemized Deductions
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+The Pease limitation on itemized deductions, named after the late U.S. Congressman Donald Pease, reduces the value of a taxpayer’s itemized deductions by 3 percent of every dollar of taxable income above a certain threshold. The 2017 tax reform temporarily eliminated the Pease limitation, but it is set to return in 2026.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+Permanently eliminating the Pease limitation would reduce federal revenue by $161 billion over the next decade on a conventional basis. As it would reduce marginal income tax rates, long-run GDP would increase by 0.1 percent. On a dynamic basis, this option would mainly affect top earners, increasing the after-tax incomes of the top quintile by 0.4 percent.
