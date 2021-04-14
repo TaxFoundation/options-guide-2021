@@ -83,7 +83,7 @@ const DistributionTable = ({ nextYear, finalYear, distribution }) => {
           <th>Income Group</th>
           <th>Conventional % Change in After-Tax Income, 2022</th>
           <th>Conventional % Change in After-Tax Income, 2031</th>
-          <th>Dynamic % Change in After Tax Income</th>
+          <th>Long Run Dynamic % Change in After Tax Income</th>
         </tr>
       </thead>
       <tbody>
