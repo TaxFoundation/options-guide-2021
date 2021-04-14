@@ -1,6 +1,6 @@
 ---
 id: 59
-title: Move to a Flat Rate
+title: Tax Individual Incomes at a Flat 30% Rate
 category: 4
 data:
   - file: option_59_flat_20.csv
