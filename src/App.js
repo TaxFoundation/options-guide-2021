@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 import { useQueryParams } from './helpers';
+import Chapters from './components/Chapters';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import OptionLayout from './components/OptionLayout';
@@ -25,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 const downloadUrl = 'https://files.taxfoundation.org/something.pdf';
 
 function App() {
-  const [option, setOption] = useQueryParams('option', 'home');
+  const [option, setOption] = useQueryParams('option', 1);
   const [optionData, setOptionData] = useState(null);
 
   const comparisonData = [];
@@ -44,19 +45,15 @@ function App() {
   });
 
   useEffect(() => {
-    if (option !== 'home') {
-      setOptionData(options.find(opt => +opt.id === +option));
-    } else {
-      setOptionData(null);
-    }
+    setOptionData(options.find(opt => +opt.id === +option));
   }, [option]);
 
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
+      <Chapters />
       <Navigation option={option} options={options} setOption={setOption} />
-      {option === 'home' && <Home />}
-      {option !== 'home' && optionData && <OptionLayout option={optionData} />}
+      {optionData && <OptionLayout option={optionData} />}
       <Comparison
         current={option}
         options={comparisonData}
