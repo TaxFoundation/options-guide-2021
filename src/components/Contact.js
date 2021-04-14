@@ -27,7 +27,7 @@ const Contact = ({ downloadUrl }) => {
   return (
     <div>
       <h2 style={{ textAlign: 'center' }}>Learn More</h2>
-      <p>
+      <p style={{ textAlign: 'center' }}>
         To learn about each option here, or for assitance modeling other tax
         reform ideas, please contact us.
       </p>

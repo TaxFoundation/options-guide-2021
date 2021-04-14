@@ -22,6 +22,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: Lato, sans-serif;
     margin: 0 auto;
     max-width: 800px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
   }
 `;
 
