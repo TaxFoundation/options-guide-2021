@@ -73,7 +73,6 @@ const OptionSelect = ({ option, options, setOption }) => {
           value={option}
           onChange={e => setOption(e.target.value)}
         >
-          <option value="home">Options for Tax Reform Home Page</option>
           {options
             .sort((a, b) => a.id - b.id)
             .map(option => (

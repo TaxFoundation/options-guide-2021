@@ -8,6 +8,14 @@ const StyledTable = styled.table`
   --normal-highlight: hsl(205, 100%, 95%);
   --rich-highlight: hsl(255, 100%, 95%);
 
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 0.25rem;
+  }
+
   thead th {
     border: none;
     border-bottom: 1px solid #ccc;

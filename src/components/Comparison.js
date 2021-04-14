@@ -19,6 +19,17 @@ const Container = styled.div`
   }
 `;
 
+const Table = styled.table`
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 0.25rem;
+  }
+`;
+
 const TH = styled.th`
   background-color: white !important;
   cursor: pointer;
@@ -97,7 +108,7 @@ const Comparison = ({ current, options, setOption }) => {
   return (
     <Container id="comparison">
       <h2 style={{ textAlign: 'center' }}>Options Comparison Table</h2>
-      <table>
+      <Table>
         <thead>
           <tr>
             <TH
@@ -173,7 +184,7 @@ const Comparison = ({ current, options, setOption }) => {
               </tr>
             ))}
         </tbody>
-      </table>
+      </Table>
     </Container>
   );
 };
