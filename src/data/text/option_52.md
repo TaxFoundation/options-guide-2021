@@ -1,12 +1,14 @@
 ---
 id: 52
-title: Reform the EITC for Married and Unmarried Workers, with and without Children
+title: Reform the EITC for Workers with and without Children and for Married and Unmarried Workers
 category: 3
 data:
   - file: option_52_eitc_marriage.csv
-    name: Reform the EITC for Married and Unmarried Workers, with and without Children
+    name: Reform the EITC for Workers with and without Children and for Married and Unmarried Workers
 ---
 
-Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
+The rates and thresholds of the EITC depend on a household’s filing status and number of children. Under current law, workers without qualifying children are eligible for a relatively small EITC, with a phase-in rate of 7.65 percent. Phaseout thresholds differ between single/head of households and married joint filers in a way that makes joint filers eligible for a smaller credit than when the two people would file their taxes individually.
 
-Ut dolor id, ut dolore aliqua pig laborum bacon kevin frankfurter minim strip steak labore fatback. Pig pariatur esse deserunt filet mignon pork loin. Qui spare ribs swine eiusmod leberkas esse velit. Quis cillum chislic strip steak filet mignon, leberkas short loin elit adipisicing beef bacon landjaeger andouille. Elit magna t-bone aliqua, labore velit cow pork belly anim veniam. Andouille meatloaf rump, quis fugiat tri-tip enim pork belly.
+This option aims to expand the EITC for workers without qualifying children by increasing their phase-in and phaseout rates to the level faced by heads of households with one child. At the same time, this option reduces the marriage penalty by increasing the phaseout threshold for married joint filers to double the threshold for non-married filers.
+
+The changes would reduce the federal revenue by $164 billion over the next decade, on a conventional basis, and would slightly decrease the aggregate marginal tax rate on labor due to the offsetting effect between phase-in and phaseout changes.
