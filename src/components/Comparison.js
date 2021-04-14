@@ -4,6 +4,21 @@ import styled from 'styled-components';
 import NumericTableCell from './NumericTableCell';
 import { wholeNumberFormat, percentToText, dollarFormat } from '../helpers';
 
+const Container = styled.div`
+  @media screen and (min-width: 1024px) {
+    width: 94vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -47vw !important;
+    margin-right: -47vw !important;
+    max-width: 94vw !important;
+    table {
+      display: table !important;
+    }
+  }
+`;
+
 const TH = styled.th`
   background-color: white !important;
   cursor: pointer;
@@ -80,83 +95,85 @@ const Comparison = ({ current, options, setOption }) => {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <TH
-            colors={sortArrows('id', sortBy, ascending)}
-            onClick={() => handleSort('id')}
-          >
-            <div>Tax Reform Option</div>
-          </TH>
-          <TH
-            colors={sortArrows('gdp', sortBy, ascending)}
-            onClick={() => handleSort('gdp')}
-          >
-            <div>Long-Run Change in GDP</div>
-          </TH>
-          <TH
-            colors={sortArrows('fte', sortBy, ascending)}
-            onClick={() => handleSort('fte')}
-          >
-            <div>Full-Time Equivalent Jobs</div>
-          </TH>
-          <TH
-            colors={sortArrows('static', sortBy, ascending)}
-            onClick={() => handleSort('static')}
-          >
-            <div>Static 10-Year Revenue (billions)</div>
-          </TH>
-          <TH
-            colors={sortArrows('dynamic', sortBy, ascending)}
-            onClick={() => handleSort('dynamic')}
-          >
-            <div>Dynamic 10-Year Revenue (billions)</div>
-          </TH>
-        </tr>
-      </thead>
-      <tbody>
-        {options
-          .sort((a, b) => {
-            switch (sortBy) {
-              case 'gdp':
-                return ascending
-                  ? a.longRunGDP - b.longRunGDP
-                  : b.longRunGDP - a.longRunGDP;
-              case 'fte':
-                return ascending
-                  ? a.fteJobs - b.fteJobs
-                  : b.fteJobs - a.fteJobs;
-              case 'static':
-                return ascending
-                  ? a.static10YearRev - b.static10YearRev
-                  : b.static10YearRev - a.static10YearRev;
-              case 'dynamic':
-                return ascending
-                  ? a.dynamic10YearRev - b.dynamic10YearRev
-                  : b.dynamic10YearRev - a.dynamic10YearRev;
-              default:
-                return ascending ? a.id - b.id : b.id - a.id;
-            }
-          })
-          .map((option, i) => (
-            <tr key={`option-table-${option.id}-${i}`}>
-              <OptionLink
-                onClick={() => {
-                  setOption(option.id);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-              >
-                {option.title}
-              </OptionLink>
-              <TD>{percentToText(option.longRunGDP)}</TD>
-              <TD>{wholeNumberFormat(option.fteJobs)}</TD>
-              <TD>{dollarFormat(option.static10YearRev)}</TD>
-              <TD>{dollarFormat(option.dynamic10YearRev)}</TD>
-            </tr>
-          ))}
-      </tbody>
-    </table>
+    <Container>
+      <table>
+        <thead>
+          <tr>
+            <TH
+              colors={sortArrows('id', sortBy, ascending)}
+              onClick={() => handleSort('id')}
+            >
+              <div>Tax Reform Option</div>
+            </TH>
+            <TH
+              colors={sortArrows('gdp', sortBy, ascending)}
+              onClick={() => handleSort('gdp')}
+            >
+              <div>Long-Run Change in GDP</div>
+            </TH>
+            <TH
+              colors={sortArrows('fte', sortBy, ascending)}
+              onClick={() => handleSort('fte')}
+            >
+              <div>Full-Time Equivalent Jobs</div>
+            </TH>
+            <TH
+              colors={sortArrows('static', sortBy, ascending)}
+              onClick={() => handleSort('static')}
+            >
+              <div>Static 10-Year Revenue (billions)</div>
+            </TH>
+            <TH
+              colors={sortArrows('dynamic', sortBy, ascending)}
+              onClick={() => handleSort('dynamic')}
+            >
+              <div>Dynamic 10-Year Revenue (billions)</div>
+            </TH>
+          </tr>
+        </thead>
+        <tbody>
+          {options
+            .sort((a, b) => {
+              switch (sortBy) {
+                case 'gdp':
+                  return ascending
+                    ? a.longRunGDP - b.longRunGDP
+                    : b.longRunGDP - a.longRunGDP;
+                case 'fte':
+                  return ascending
+                    ? a.fteJobs - b.fteJobs
+                    : b.fteJobs - a.fteJobs;
+                case 'static':
+                  return ascending
+                    ? a.static10YearRev - b.static10YearRev
+                    : b.static10YearRev - a.static10YearRev;
+                case 'dynamic':
+                  return ascending
+                    ? a.dynamic10YearRev - b.dynamic10YearRev
+                    : b.dynamic10YearRev - a.dynamic10YearRev;
+                default:
+                  return ascending ? a.id - b.id : b.id - a.id;
+              }
+            })
+            .map((option, i) => (
+              <tr key={`option-table-${option.id}-${i}`}>
+                <OptionLink
+                  onClick={() => {
+                    setOption(option.id);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                >
+                  {option.title}
+                </OptionLink>
+                <TD>{percentToText(option.longRunGDP)}</TD>
+                <TD>{wholeNumberFormat(option.fteJobs)}</TD>
+                <TD>{dollarFormat(option.static10YearRev)}</TD>
+                <TD>{dollarFormat(option.dynamic10YearRev)}</TD>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+    </Container>
   );
 };
 
