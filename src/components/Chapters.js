@@ -121,8 +121,8 @@ const Chapters = () => {
         </ChapterSelect>
       </ChapterSelectContainer>
       <div>
-        {text[chapter].map(para => (
-          <p>{para}</p>
+        {text[chapter].map((para, i) => (
+          <p key={`${chapter}-${i}`}>{para}</p>
         ))}
       </div>
     </div>

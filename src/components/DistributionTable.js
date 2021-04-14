@@ -97,6 +97,7 @@ const DistributionTable = ({ nextYear, finalYear, distribution }) => {
       <tbody>
         {distributions.map(dist => (
           <tr
+            key={dist.id}
             style={{
               backgroundImage: dist.bg,
             }}
