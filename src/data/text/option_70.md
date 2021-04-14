@@ -1,10 +1,10 @@
 ---
 id: 70
-title: Increase Alcohol Excise Taxes to $16 per proof gallon
+title: Increase Alcohol Excise Taxes to $16 per Proof Gallon and Index to Inflation
 category: 4
 data:
   - file: option_70_alcohol.csv
-    name: Increase Alcohol Excise Taxes to $16 per proof gallon
+    name: Increase Alcohol Excise Taxes to $16 per Proof Gallon and Index to Inflation
 ---
 
 Burgdoggen strip steak tri-tip pork tongue andouille incididunt pork belly. In ipsum cupim, turducken tempor doner consectetur. Consequat incididunt eiusmod bresaola enim shankle hamburger. Quis boudin doner, chuck brisket bacon ad pig sirloin rump frankfurter meatball prosciutto. Adipisicing aute ullamco buffalo irure. Deserunt in prosciutto, reprehenderit cow duis exercitation short loin minim enim tongue consequat ut. Pariatur porchetta irure leberkas tempor short loin ut ham hock nisi shankle prosciutto brisket anim spare ribs.
