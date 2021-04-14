@@ -13,10 +13,10 @@ const dollarFormat = number =>
   );
 
 const percentFormat = number => {
-  const precision = number <= 0.0001 ? 2 : 1;
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'percent',
-    maximumFractionDigits: precision,
+    maximumFractionDigits: 1,
+    minimumFractionDigits: 1,
   });
   return formatter.format(number);
 };
