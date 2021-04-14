@@ -1,6 +1,6 @@
 ---
 id: 51
-title: Double to EITC for Workers without Qualifying Children
+title: Double EITC for Workers without Qualifying Children to $1,075
 category: 3
 data:
   - file: option_51_EITC_childless.csv
