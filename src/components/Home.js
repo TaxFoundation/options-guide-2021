@@ -1,5 +1,7 @@
 import React from 'react';
 
+import HR from './HR';
+
 const Home = () => {
   return (
     <div>
@@ -28,6 +30,7 @@ const Home = () => {
         distributional impacts, or access a printable version of the full
         Options guide at the link below.
       </p>
+      <HR />
     </div>
   );
 };

@@ -95,7 +95,7 @@ const Comparison = ({ current, options, setOption }) => {
   };
 
   return (
-    <Container>
+    <Container id="comparison">
       <table>
         <thead>
           <tr>

@@ -41,12 +41,25 @@ const SelectContainer = styled.div`
 const Select = styled.select`
   appearance: none;
   background-color: transparent;
+  border: none;
   cursor: pointer;
   grid-area: select;
   font-size: 1rem;
   text-align: center;
-  width: 100%;
+  width: 95%;
   z-index: 1;
+`;
+
+const Link = styled.a`
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: underline;
+
+  &:visited,
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
 `;
 
 const OptionSelect = ({ option, options, setOption }) => {
@@ -71,6 +84,7 @@ const OptionSelect = ({ option, options, setOption }) => {
             ))}
         </Select>
       </SelectContainer>
+      <Link href="#comparison">Compare all options</Link>
     </Container>
   );
 };
