@@ -4,11 +4,11 @@ title: Lower Individual Income Tax Rates Across the Board
 category: 1
 data:
   - file: option_1_10_percent.csv
-    name: Lower 10%
+    name: Lower All Rates by 10%
   - file: option_1_15_percent.csv
-    name: Lower 15%
+    name: Lower All Rates by 15%
   - file: option_1_20_percent.csv
-    name: Lower 20%
+    name: Lower All Rates by 20%
 ---
 
 This option would reduce all seven income tax rates by 10 percent, resulting in a new top rate of 33.3 percent in years 2022 through 2025 and 35.6 percent in 2026 through 2031. The bottom rate would be 9 percent. Rates in between would also be reduced by 10 percent.
