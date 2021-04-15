@@ -81,12 +81,12 @@ const Option = ({ option }) => {
         {option.data[subOption] && (
           <>
             <Effects>
+              <EconomicEffects
+                econEffects={option.data[subOption].longRunEconomic}
+              />
               <BudgetaryEffects
                 conventional={option.data[subOption].conventionalRevenue.total}
                 dynamic={option.data[subOption].dynamicRevenue.total}
-              />
-              <EconomicEffects
-                econEffects={option.data[subOption].longRunEconomic}
               />
             </Effects>
             <Graph data={generateGraphData(option.data[subOption])}></Graph>
