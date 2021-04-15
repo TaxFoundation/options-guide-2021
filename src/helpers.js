@@ -22,8 +22,9 @@ const percentFormat = number => {
 };
 
 const percentToText = percent => {
-  if (percent <= 0.0005 && percent >= -0.0005) {
-    return percent >= 0 ? 'Less than +0.05%' : 'Less than -0.05%';
+  if (+percent === 0) return '0%';
+  if (percent < 0.0005 && percent > -0.0005) {
+    return percent >= 0 ? '< +0.05%' : '< -0.05%';
   }
   const sign = percent >= 0 ? '+' : '';
   return `${sign}${percentFormat(percent)}`;

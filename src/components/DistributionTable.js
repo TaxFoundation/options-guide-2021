@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NumericTableCell from './NumericTableCell';
-import { percentFormat } from '../helpers';
+import { percentToText } from '../helpers';
 
 const StyledTable = styled.table`
   --normal-highlight: hsl(205, 100%, 95%);
@@ -105,23 +105,23 @@ const DistributionTable = ({ nextYear, finalYear, distribution }) => {
           >
             <td>{dist.name}</td>
             <NumericTableCell>
-              {percentFormat(nextYear[dist.id])}
+              {percentToText(nextYear[dist.id])}
             </NumericTableCell>
             <NumericTableCell>
-              {percentFormat(finalYear[dist.id])}
+              {percentToText(finalYear[dist.id])}
             </NumericTableCell>
             <NumericTableCell>
-              {percentFormat(distribution[dist.id])}
+              {percentToText(distribution[dist.id])}
             </NumericTableCell>
           </tr>
         ))}
 
         <tr style={{ backgroundColor: 'transparent', fontWeight: 700 }}>
           <td>Total</td>
-          <NumericTableCell>{percentFormat(nextYear.total)}</NumericTableCell>
-          <NumericTableCell>{percentFormat(finalYear.total)}</NumericTableCell>
+          <NumericTableCell>{percentToText(nextYear.total)}</NumericTableCell>
+          <NumericTableCell>{percentToText(finalYear.total)}</NumericTableCell>
           <NumericTableCell>
-            {percentFormat(distribution.total)}
+            {percentToText(distribution.total)}
           </NumericTableCell>
         </tr>
       </tbody>
