@@ -43,7 +43,7 @@ const distributions = [
     id: '20To40',
     name: '20% to 40%',
     bg:
-      'linear-gradient(90deg, #fafafa 0%, #fafafa 40%, var(--normal-highlight) 40%, var(--normal-highlight) 60%, #fefefe 60%, #fefefe 100%)',
+      'linear-gradient(90deg, #fafafa 0%, #fafafa 20%, var(--normal-highlight) 20%, var(--normal-highlight) 40%, #fefefe 40%, #fefefe 100%)',
   },
   {
     id: '40To60',
