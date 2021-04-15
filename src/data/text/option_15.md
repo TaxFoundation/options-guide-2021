@@ -1,10 +1,10 @@
 ---
 id: 15
-title: Repeal the TCJA Individual Income Tax Changes
+title: Repeal the Tax Cuts and Jobs Act (TCJA) Individual Tax Changes
 category: 2
 data:
   - file: option_15_repealTCJA.csv
-    name: Repeal the TCJA Individual Income Tax Changes
+    name: Repeal the Tax Cuts and Jobs Act (TCJA) Individual Tax Changes
 ---
 
 The 2017 tax reform made significant changes to the individual income tax, but most of the changes are temporary and will expire after 2025. Under this option, the following reforms would immediately revert to their pre-law levels: income tax rate brackets; modified standard deduction, personal exemption, and child tax credit; 20 percent deduction for qualified business income; changes to deductions for state and local taxes, home mortgage interest, and certain other deductions; and changes to the alternative minimum tax.

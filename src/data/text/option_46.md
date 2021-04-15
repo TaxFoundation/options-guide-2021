@@ -1,10 +1,10 @@
 ---
 id: 46
-title: Reduce the Estate Tax Exemption to $2 million
+title: Lower the Estate and Gift Tax Exemption Amount to $2 Million
 category: 2
 data:
   - file: option_46_estate_exem_2m.csv
-    name: Reduce the Estate Tax Exemption to $2 million
+    name: Lower the Estate and Gift Tax Exemption Amount to $2 Million
 ---
 
 Under current law, the unified estate and gift tax has exemptions of $11.7 million (indexed for inflation) for individuals and $23.4 million for couples, resulting in about 5,000 estates subject to tax each year.

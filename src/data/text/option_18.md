@@ -1,10 +1,10 @@
 ---
 id: 18
-title: Add a Flat 5 Percent Tax on Individual Income
+title: Create an Additional Flat Individual Income Tax of 5%
 category: 2
 data:
   - file: option_18_flat_5.csv
-    name: Add a Flat 5 Percent Tax on Individual Income
+    name: Create an Additional Flat Individual Income Tax of 5%
 ---
 
 This option would introduce an additional individual income tax of 5 percent, which would apply to all taxable income.

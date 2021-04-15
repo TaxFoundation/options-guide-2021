@@ -1,10 +1,10 @@
 ---
 id: 35
-title: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
+title: Apply the Social Security Payroll Tax to Wages Above $400,000
 category: 2
 data:
   - file: option_35_payroll_over_$400K.csv
-    name: Apply the Social Security Payroll Tax to Wages and Self-Employment Income Above $400,000
+    name: Apply the Social Security Payroll Tax to Wages Above $400,000
 ---
 
 While the most straightforward way to expand the Social Security payroll tax base is to raise the cap on taxable wages, some policymakers have proposed a different option: applying the Social Security payroll tax to income above $400,000. Under this option, individuals would be subject to the Social Security payroll tax and self-employment tax on their first $142,800 of labor income, as well as on all labor income above $400,000, but not any labor income in between these thresholds (creating a so called “donut hole”). This option assumes no change to Social Security benefits compared to current law.

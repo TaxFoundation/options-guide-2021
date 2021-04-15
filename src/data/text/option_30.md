@@ -1,10 +1,10 @@
 ---
 id: 30
-title: Tax Capital Gains at 39.6% Above $1 Million
+title: Raise Top Capital Gains Rate to 39.6 Percent on Income Above $1 Million
 category: 2
 data:
   - file: option_30_cap_gains_1M_39.6.csv
-    name: Tax Capital Gains at 39.6% Above $1 Million
+    name: Raise Top Capital Gains Rate to 39.6 Percent on Income Above $1 Million
 ---
 
 Under the current tax code, long-term capital gains and qualified dividends are taxed at lower rates than ordinary income (which includes wages, interest, and most other sources of income). This option would raise the long-term capital gains and qualified dividends tax rate to 39.6 percent for income earned over $1 million, up from a top rate of 20 percent under current law.

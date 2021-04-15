@@ -1,10 +1,10 @@
 ---
 id: 6
-title: Index Capital Gains to Inflation
+title: Index Capital Gains Realizations to Inflation
 category: 1
 data:
   - file: option_6_capgains_inflation.csv
-    name: Index Capital Gains to Inflation
+    name: Index Capital Gains Realizations to Inflation
 ---
 
 Under the current U.S. tax code, capital gains are only taxed when the underlying asset is sold (or “realized”). As the taxes are not adjusted for inflation, some portion of the capital gain that is taxed is not actually real growth in the value of the asset. Short-term capital gains are taxed at ordinary income tax rates, while long-term capital gains are taxed at lower rates.
