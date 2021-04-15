@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   .options-guide-interactive {
     font-family: Lato, sans-serif;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 760px;
 
     p {
       font-size: 1rem;

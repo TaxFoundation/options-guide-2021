@@ -23,7 +23,7 @@ const EffectsList = styled.ul`
   grid-gap: 1rem;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
 
   li {
     margin: 0;

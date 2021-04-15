@@ -12,7 +12,7 @@ const Container = styled.div`
     right: 50% !important;
     margin-left: -47vw !important;
     margin-right: -47vw !important;
-    max-width: 94vw !important;
+    width: 94vw !important;
     table {
       display: table !important;
     }
@@ -22,7 +22,10 @@ const Container = styled.div`
 const Table = styled.table`
   border: 1px solid #ccc;
   border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 1600px;
   position: relative;
+  width: 100%;
 
   th,
   td {
