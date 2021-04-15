@@ -17,9 +17,7 @@ const StyledTable = styled.table`
   }
 
   thead th {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    border: 1px solid #ccc;
     font-size: 0.9rem;
   }
 
@@ -88,10 +86,13 @@ const DistributionTable = ({ nextYear, finalYear, distribution }) => {
     <StyledTable>
       <thead>
         <tr>
-          <th>Income Group</th>
-          <th>Conventional % Change in After-Tax Income, 2022</th>
-          <th>Conventional % Change in After-Tax Income, 2031</th>
-          <th>Long Run Dynamic % Change in After Tax Income</th>
+          <th rowSpan="2">Income Group</th>
+          <th colSpan="3">Percent Change in After Tax Income</th>
+        </tr>
+        <tr>
+          <th>Conventional, 2022</th>
+          <th>Conventional, 2031</th>
+          <th>Long Run Dynamic</th>
         </tr>
       </thead>
       <tbody>
