@@ -20,7 +20,7 @@ const StyledTable = styled.table`
     border: none;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   tbody tr td {
@@ -28,7 +28,7 @@ const StyledTable = styled.table`
     border: none;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 `;
 

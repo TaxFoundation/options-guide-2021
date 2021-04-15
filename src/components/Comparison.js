@@ -36,7 +36,7 @@ const TH = styled.th`
   background-clip: padding-box;
   box-shadow: 0 1px 0 0 #ccc;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   position: sticky;
   top: 0;
@@ -88,7 +88,7 @@ const TD = styled(NumericTableCell)`
 const OptionLink = styled.td`
   color: var(--tf-blue);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `;
 
 const Comparison = ({ current, options, setOption }) => {
