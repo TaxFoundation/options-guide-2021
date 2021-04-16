@@ -44,15 +44,20 @@ const ChapterSelect = styled.button`
   }
 `;
 
-const ListOfOptions = styled.ul`
+const ListOfOptions = styled.ol`
+  margin: 0;
+  padding: 0;
+
   @media screen and (min-width: 500px) {
     column-count: 3;
+    gap: 1rem;
   }
 
   li {
     color: #0094ff;
     cursor: pointer;
     font-size: 0.8rem;
+    padding: 0.1rem 0.25rem;
     text-decoration: underline;
   }
 `;
@@ -92,8 +97,9 @@ const text = {
 };
 
 const Chapters = ({ chapter, setChapter, options, setOption }) => {
+  const currentOptions = options.filter(opt => opt.category === chapter);
   return (
-    <div>
+    <div style={{ marginBottom: '1rem' }}>
       <ChapterSelectContainer>
         <ChapterSelect
           color="#333"
@@ -136,14 +142,12 @@ const Chapters = ({ chapter, setChapter, options, setOption }) => {
           <p key={`${chapter}-${i}`}>{para}</p>
         ))}
         {chapter !== 'home' && (
-          <ListOfOptions>
-            {options
-              .filter(opt => opt.category === chapter)
-              .map(opt => (
-                <li role="button" onClick={() => setOption(+opt.id)}>
-                  {opt.title}
-                </li>
-              ))}
+          <ListOfOptions start={currentOptions[0].id}>
+            {currentOptions.map(opt => (
+              <li role="button" onClick={() => setOption(+opt.id)}>
+                {opt.title}
+              </li>
+            ))}
           </ListOfOptions>
         )}
       </div>
