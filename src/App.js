@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
 const downloadUrl = 'https://files.taxfoundation.org/something.pdf';
 
 function App() {
+  const [chapter, setChapter] = useState('home');
   const [option, setOption] = useQueryParams('option', 1);
   const [optionData, setOptionData] = useState(null);
 
@@ -52,13 +53,20 @@ function App() {
   });
 
   useEffect(() => {
-    setOptionData(options.find(opt => +opt.id === +option));
+    if (option !== 'home') {
+      const newOptionData = options.find(opt => +opt.id === +option);
+      setChapter(newOptionData.category);
+      setOptionData(newOptionData);
+    } else {
+      setChapter('home');
+      setOptionData(null);
+    }
   }, [option]);
 
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
-      <Chapters />
+      <Chapters chapter={chapter} setChapter={setChapter} />
       <Navigation option={option} options={options} setOption={setOption} />
       {optionData && <OptionLayout option={optionData} />}
       <Comparison

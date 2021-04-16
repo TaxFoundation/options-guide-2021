@@ -73,6 +73,7 @@ const OptionSelect = ({ option, options, setOption }) => {
           value={option}
           onChange={e => setOption(e.target.value)}
         >
+          <option value="home">Select an Option from the Menu</option>
           {options
             .sort((a, b) => a.id - b.id)
             .map(option => (

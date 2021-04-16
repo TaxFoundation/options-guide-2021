@@ -26,6 +26,7 @@ function buildData() {
     const { data: metadata } = matter(text);
     option.id = metadata.id;
     option.title = metadata.title;
+    option.category = metadata.category;
     option.text = html;
     option.data = [];
     metadata.data.forEach(({ file, name }) => {

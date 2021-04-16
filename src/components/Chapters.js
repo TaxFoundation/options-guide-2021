@@ -78,9 +78,7 @@ const text = {
   ],
 };
 
-const Chapters = () => {
-  const [chapter, setChapter] = useState('home');
-
+const Chapters = ({ chapter, setChapter }) => {
   return (
     <div>
       <ChapterSelectContainer>
