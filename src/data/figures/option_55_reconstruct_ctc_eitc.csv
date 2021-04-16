@@ -1,9 +1,9 @@
 Indicator,Sub-indicator,Value
-Long-run Economic,GDP,-0.000476581
-Long-run Economic,GNP,-0.000463368
-Long-run Economic,Capital Stock,-0.001025987
-Long-run Economic,Wage Rate,-0.000288072
-Long-run Economic,Full-Time Equivalent Jobs,-22120.90776
+Long-run Economic,GDP,0.000688341
+Long-run Economic,GNP,0.000691921
+Long-run Economic,Capital Stock,0.000632995
+Long-run Economic,Wage Rate,-8.31E-05
+Long-run Economic,Full-Time Equivalent Jobs,86985.78315
 Conventional Revenue,2022,-86.3
 Conventional Revenue,2023,-85.4
 Conventional Revenue,2024,-84
