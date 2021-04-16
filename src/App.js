@@ -66,7 +66,12 @@ function App() {
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
-      <Chapters chapter={chapter} setChapter={setChapter} />
+      <Chapters
+        chapter={chapter}
+        setChapter={setChapter}
+        options={options}
+        setOption={setOption}
+      />
       <Navigation option={option} options={options} setOption={setOption} />
       {optionData && <OptionLayout option={optionData} />}
       <Comparison

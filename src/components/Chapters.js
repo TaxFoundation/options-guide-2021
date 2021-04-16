@@ -44,6 +44,19 @@ const ChapterSelect = styled.button`
   }
 `;
 
+const ListOfOptions = styled.ul`
+  @media screen and (min-width: 500px) {
+    column-count: 3;
+  }
+
+  li {
+    color: #0094ff;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: underline;
+  }
+`;
+
 const text = {
   home: [
     'The economic crisis caused by the coronavirus pandemic poses a triple challenge for tax policy in the United States. Lawmakers are tasked with crafting a policy response that will accelerate the economic recovery, reduce the mounting deficit, and protect the most vulnerable.',
@@ -78,7 +91,7 @@ const text = {
   ],
 };
 
-const Chapters = ({ chapter, setChapter }) => {
+const Chapters = ({ chapter, setChapter, options, setOption }) => {
   return (
     <div>
       <ChapterSelectContainer>
@@ -122,6 +135,17 @@ const Chapters = ({ chapter, setChapter }) => {
         {text[chapter].map((para, i) => (
           <p key={`${chapter}-${i}`}>{para}</p>
         ))}
+        {chapter !== 'home' && (
+          <ListOfOptions>
+            {options
+              .filter(opt => opt.category === chapter)
+              .map(opt => (
+                <li role="button" onClick={() => setOption(+opt.id)}>
+                  {opt.title}
+                </li>
+              ))}
+          </ListOfOptions>
+        )}
       </div>
     </div>
   );
