@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const downloadUrl = 'https://files.taxfoundation.org/something.pdf';
+const downloadUrl = '/options-for-tax-reform-2021.pdf';
 
 function App() {
   const [chapter, setChapter] = useState('home');
