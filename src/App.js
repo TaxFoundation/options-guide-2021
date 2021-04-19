@@ -34,7 +34,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const downloadUrl = '/options-for-tax-reform-2021.pdf';
+const downloadUrl =
+  'https://files.taxfoundation.org/20210419084023/Options-for-Reforming-Americas-Tax-Code-2021-US-Tax-Reform-Options.pdf';
 
 function App() {
   const [chapter, setChapter] = useState('home');
