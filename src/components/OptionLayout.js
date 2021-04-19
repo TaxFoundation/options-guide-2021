@@ -58,7 +58,7 @@ const Option = ({ option }) => {
 
   return (
     <div>
-      <h2 style={{ textAlign: 'center' }}>
+      <h2 id="option-title" style={{ textAlign: 'center' }}>
         <OptionNumber>Option {option.id}</OptionNumber>
         {option.title}
       </h2>

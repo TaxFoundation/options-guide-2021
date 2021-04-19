@@ -57,6 +57,7 @@ const ListOfOptions = styled.ol`
     color: #0094ff;
     cursor: pointer;
     font-size: 0.8rem;
+    line-height: 1.4;
     margin: 0;
     padding: 0.1rem 0.25rem;
     text-decoration: underline;
@@ -145,7 +146,11 @@ const Chapters = ({ chapter, setChapter, options, setOption }) => {
         {chapter !== 'home' && (
           <ListOfOptions start={currentOptions[0].id}>
             {currentOptions.map(opt => (
-              <li role="button" onClick={() => setOption(+opt.id)}>
+              <li
+                key={`chapter-${opt.id}`}
+                role="button"
+                onClick={() => setOption(+opt.id)}
+              >
                 {opt.title}
               </li>
             ))}
