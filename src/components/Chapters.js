@@ -46,7 +46,7 @@ const ChapterSelect = styled.button`
 
 const ListOfOptions = styled.ol`
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1rem;
 
   @media screen and (min-width: 500px) {
     column-count: 3;
