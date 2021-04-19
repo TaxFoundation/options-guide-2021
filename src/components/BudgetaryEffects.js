@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { Effect, EffectsList, EffectStatistic } from './Effects';
-import Tooltip, { TooltipIcon } from './Tooltip';
+import Tooltip, { CloseIcon, QuestionIcon } from './Tooltip';
 import { dollarFormat } from '../helpers';
 
 const BudgetaryEffects = ({ conventional, dynamic }) => {
@@ -24,15 +24,19 @@ const BudgetaryEffects = ({ conventional, dynamic }) => {
       <Effect>
         <h3>
           Budgetary Effects
-          <TooltipIcon
-            onClick={e =>
-              showTooltip
-                ? tooltipMouseout()
-                : tooltipMouseEnter(e.clientX, e.clientY)
-            }
-          >
-            {showTooltip ? 'X' : '?'}
-          </TooltipIcon>
+          {showTooltip ? (
+            <CloseIcon
+              onClick={() => {
+                tooltipMouseout();
+              }}
+            />
+          ) : (
+            <QuestionIcon
+              onClick={e => {
+                tooltipMouseEnter(e.clientX, e.clientY);
+              }}
+            />
+          )}
         </h3>
         <EffectsList>
           <li>
