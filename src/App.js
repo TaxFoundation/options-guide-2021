@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     --gray: #ccc;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   .options-guide-interactive {
     font-family: Lato, sans-serif;
     margin: 0 auto;

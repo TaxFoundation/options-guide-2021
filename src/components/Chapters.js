@@ -57,6 +57,7 @@ const ListOfOptions = styled.ol`
     color: #0094ff;
     cursor: pointer;
     font-size: 0.8rem;
+    margin: 0;
     padding: 0.1rem 0.25rem;
     text-decoration: underline;
   }
