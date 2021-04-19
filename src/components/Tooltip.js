@@ -40,7 +40,7 @@ const Tooltip = ({ show, children, x, y }) => {
       show={show}
       style={{
         top: show ? `${y - 200}px` : 0,
-        left: show ? `${x - 50}px` : 0,
+        left: show ? `${x - 300}px` : 0,
       }}
     >
       {children}
