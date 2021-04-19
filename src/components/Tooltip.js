@@ -44,11 +44,12 @@ const StyledTooltip = styled.div`
   color: #333;
   display: ${props => (props.show ? 'block' : 'none')};
   font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
   line-height: 1.4rem;
   padding: 1rem;
   position: fixed;
   text-align: initial;
-  width: 400px;
+  width: 300px;
   z-index: 1000;
 `;
 
@@ -57,8 +58,8 @@ const Tooltip = ({ show, children, x, y }) => {
     <StyledTooltip
       show={show}
       style={{
-        top: show ? `${y - 200}px` : 0,
-        left: show ? `${x - 300}px` : 0,
+        top: show ? `${y - 260}px` : 0,
+        left: show ? `${x - 225}px` : 0,
       }}
     >
       {children}
