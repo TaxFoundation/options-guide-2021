@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 import { useQueryParams } from './helpers';
@@ -39,8 +39,9 @@ const downloadUrl =
 
 function App() {
   const [chapter, setChapter] = useState('home');
-  const [option, setOption] = useQueryParams('option', 1);
+  const [option, setOption] = useQueryParams('option', 'home');
   const [optionData, setOptionData] = useState(null);
+  const optionRef = useRef(null);
 
   const comparisonData = [];
   options.forEach(option => {
@@ -69,6 +70,12 @@ function App() {
     }
   }, [option]);
 
+  useEffect(() => {
+    if (optionRef.current) {
+      optionRef.current.scrollIntoView();
+    }
+  }, [optionData]);
+
   return (
     <div className="options-guide-interactive">
       <GlobalStyle />
@@ -79,7 +86,11 @@ function App() {
         setOption={setOption}
       />
       <Navigation option={option} options={options} setOption={setOption} />
-      {optionData && <OptionLayout option={optionData} />}
+      {optionData && (
+        <div ref={optionRef}>
+          <OptionLayout option={optionData} />
+        </div>
+      )}
       <Comparison
         current={option}
         options={comparisonData}

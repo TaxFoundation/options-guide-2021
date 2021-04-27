@@ -71,6 +71,7 @@ const Option = ({ option }) => {
           {option.data.length > 1 &&
             option.data.map((d, i) => (
               <Button
+                key={`comp-opt-link-${i}`}
                 active={i === subOption}
                 onClick={() => {
                   setSubOption(i);
