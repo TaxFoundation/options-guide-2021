@@ -52,6 +52,7 @@ function App() {
           : `${option.id}: ${option.title} (${option.data[0].name})`,
       longRunGDP: option.data[0].longRunEconomic.gdp,
       fteJobs: option.data[0].longRunEconomic.fullTimeEquivalentJobs,
+      wageRate: option.data[0].longRunEconomic.wageRate,
       static10YearRev: option.data[0].conventionalRevenue.total,
       dynamic10YearRev: option.data[0].dynamicRevenue.total,
     });

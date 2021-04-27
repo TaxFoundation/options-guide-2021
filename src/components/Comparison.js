@@ -139,6 +139,12 @@ const Comparison = ({ current, options, setOption }) => {
               <div>Full-Time Equivalent Jobs</div>
             </TH>
             <TH
+              colors={sortArrows('wage', sortBy, ascending)}
+              onClick={() => handleSort('wage')}
+            >
+              <div>Wage Rate</div>
+            </TH>
+            <TH
               colors={sortArrows('static', sortBy, ascending)}
               onClick={() => handleSort('static')}
             >
@@ -164,6 +170,10 @@ const Comparison = ({ current, options, setOption }) => {
                   return ascending
                     ? a.fteJobs - b.fteJobs
                     : b.fteJobs - a.fteJobs;
+                case 'wage':
+                  return ascending
+                    ? a.wageRate - b.wageRate
+                    : b.wageRate - a.wageRate;
                 case 'static':
                   return ascending
                     ? a.static10YearRev - b.static10YearRev
@@ -190,6 +200,7 @@ const Comparison = ({ current, options, setOption }) => {
                 </OptionLink>
                 <TD>{percentToText(option.longRunGDP)}</TD>
                 <TD>{wholeNumberFormat(option.fteJobs)}</TD>
+                <TD>{percentToText(option.wageRate)}</TD>
                 <TD>{dollarFormat(option.static10YearRev)}</TD>
                 <TD>{dollarFormat(option.dynamic10YearRev)}</TD>
               </tr>
