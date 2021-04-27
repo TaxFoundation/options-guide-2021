@@ -181,9 +181,6 @@ const Comparison = ({ current, options, setOption }) => {
                 <OptionLink
                   onClick={() => {
                     setOption(option.id);
-                    document
-                      .getElementById('option-title')
-                      .scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   {option.title}
