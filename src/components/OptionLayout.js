@@ -51,8 +51,10 @@ const generateGraphData = data => {
 
 const Option = ({ option }) => {
   const [subOption, setSubOption] = useState(0);
+  const [urlCopy, setURLCopy] = useState(false);
 
   useEffect(() => {
+    setURLCopy(false);
     setSubOption(0);
   }, [option]);
 
@@ -101,9 +103,14 @@ const Option = ({ option }) => {
       {navigator && (
         <Button
           style={{ display: 'block', margin: '1rem auto 0' }}
-          onClick={() => navigator.clipboard.writeText(window.location.href)}
+          onClick={() => {
+            setURLCopy(true);
+            navigator.clipboard.writeText(window.location.href);
+          }}
         >
-          📋 Click here to copy URL to this option to share.
+          {urlCopy
+            ? 'Copied!'
+            : '📋 Click here to copy URL to this option to share.'}
         </Button>
       )}
 
