@@ -87,7 +87,7 @@ function App() {
       />
       <Navigation option={option} options={options} setOption={setOption} />
       {optionData && (
-        <div ref={optionRef}>
+        <div ref={optionRef} style={{ scrollMarginTop: '100px' }}>
           <OptionLayout option={optionData} />
         </div>
       )}
