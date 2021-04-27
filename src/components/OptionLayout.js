@@ -98,6 +98,15 @@ const Option = ({ option }) => {
           </>
         )}
       </DataContainer>
+      {navigator && (
+        <Button
+          style={{ display: 'block', margin: '1rem auto 0' }}
+          onClick={() => navigator.clipboard.writeText(window.location.href)}
+        >
+          📋 Click here to copy URL to this option to share.
+        </Button>
+      )}
+
       <HR />
     </div>
   );
