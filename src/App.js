@@ -7,7 +7,6 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import OptionLayout from './components/OptionLayout';
 import Comparison from './components/Comparison';
-import Contact from './components/Contact';
 
 import options from './data/cleaned/data.json';
 
@@ -96,7 +95,7 @@ function App() {
         options={comparisonData}
         setOption={setOption}
       />
-      <Contact downloadUrl={downloadUrl} />
+
     </div>
   );
 }
